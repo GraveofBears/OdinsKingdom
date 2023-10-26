@@ -19,7 +19,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.1.24";
+        private const string ModVersion = "1.1.25";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -649,7 +649,7 @@ namespace OdinsKingdom
             BuildPiece GB_Oval_Rug = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Oval_Rug");
             GB_Oval_Rug.Tool.Add("GB_Parchment_Tool");
             GB_Oval_Rug.RequiredItems.Add("DeerHide", 4, true);
-            GB_Oval_Rug.RequiredItems.Add("Stone", 2, true);
+            GB_Oval_Rug.RequiredItems.Add("Coal", 2, true);
             GB_Oval_Rug.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Oval_Rug.Category.Set(BuildPieceCategory.Furniture);
 
@@ -1288,6 +1288,23 @@ namespace OdinsKingdom
             GB_Castle_Glass_Roof_45.Category.Set(BuildPieceCategory.Misc);
             MaterialReplacer.RegisterGameObjectForShaderSwap(GB_Castle_Glass_Roof_45.Prefab, MaterialReplacer.ShaderType.UseUnityShader);
 
+            BuildPiece GB_Stone_Cross = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Cross");
+            GB_Stone_Cross.Tool.Add("GB_Parchment_Tool");
+            GB_Stone_Cross.RequiredItems.Add("Stone", 6, true);
+            GB_Stone_Cross.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Stone_Cross.Category.Set(BuildPieceCategory.Furniture);
+
+            BuildPiece GB_Hidden_Floor_Hatch = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hidden_Floor_Hatch");
+            GB_Hidden_Floor_Hatch.Tool.Add("GB_Parchment_Tool");
+            GB_Hidden_Floor_Hatch.RequiredItems.Add("Wood", 4, true);
+            GB_Hidden_Floor_Hatch.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Hidden_Floor_Hatch.Category.Set(BuildPieceCategory.Misc);
+
+            BuildPiece GB_Castle_Stone_Slab = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Stone_Slab");
+            GB_Castle_Stone_Slab.Tool.Add("GB_Parchment_Tool");
+            GB_Castle_Stone_Slab.RequiredItems.Add("Stone", 6, true);
+            GB_Castle_Stone_Slab.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Castle_Stone_Slab.Category.Set(BuildPieceCategory.Misc);
 
 
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "sfx_openbag");
