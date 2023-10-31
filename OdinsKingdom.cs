@@ -19,7 +19,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.1.25";
+        private const string ModVersion = "1.1.26";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -322,9 +322,15 @@ namespace OdinsKingdom
 
             BuildPiece GB_Wood_Table = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Table");
             GB_Wood_Table.Tool.Add("GB_Parchment_Tool");
-            GB_Wood_Table.RequiredItems.Add("Wood", 10, true);
+            GB_Wood_Table.RequiredItems.Add("FineWood", 5, true);
             GB_Wood_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wood_Table.Category.Set(BuildPieceCategory.Furniture);
+
+            BuildPiece GB_Old_Wood_Table = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Old_Wood_Table");
+            GB_Old_Wood_Table.Tool.Add("GB_Parchment_Tool");
+            GB_Old_Wood_Table.RequiredItems.Add("Wood", 5, true);
+            GB_Old_Wood_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Old_Wood_Table.Category.Set(BuildPieceCategory.Furniture);
 
             BuildPiece GB_Casket_Lid = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Casket_Lid");
             GB_Casket_Lid.Tool.Add("GB_Parchment_Tool");
@@ -705,7 +711,7 @@ namespace OdinsKingdom
 
             BuildPiece GB_Large_Stone_Orn = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Stone_Orn");
             GB_Large_Stone_Orn.Tool.Add("GB_Parchment_Tool");
-            GB_Large_Stone_Orn.RequiredItems.Add("Stone", 10, true);
+            GB_Large_Stone_Orn.RequiredItems.Add("Stone", 6, true);
             GB_Large_Stone_Orn.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Stone_Orn.Category.Set(BuildPieceCategory.Building);
 
@@ -1299,12 +1305,6 @@ namespace OdinsKingdom
             GB_Hidden_Floor_Hatch.RequiredItems.Add("Wood", 4, true);
             GB_Hidden_Floor_Hatch.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Hidden_Floor_Hatch.Category.Set(BuildPieceCategory.Misc);
-
-            BuildPiece GB_Castle_Stone_Slab = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Stone_Slab");
-            GB_Castle_Stone_Slab.Tool.Add("GB_Parchment_Tool");
-            GB_Castle_Stone_Slab.RequiredItems.Add("Stone", 6, true);
-            GB_Castle_Stone_Slab.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Castle_Stone_Slab.Category.Set(BuildPieceCategory.Misc);
 
 
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "sfx_openbag");
