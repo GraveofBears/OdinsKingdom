@@ -1349,6 +1349,19 @@ namespace OdinsKingdom
             GB_Fire_Pit.RequiredItems.Add("Wood", 2, true);
             GB_Fire_Pit.Category.Set(BuildPieceCategory.Misc);
 
+            BuildPiece GB_Small_Cupboard = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Small_Cupboard");
+            GB_Small_Cupboard.Tool.Add("GB_Parchment_Tool");
+            GB_Small_Cupboard.RequiredItems.Add("FineWood", 6, true);
+            GB_Small_Cupboard.RequiredItems.Add("BronzeNails", 2, true);
+            GB_Small_Cupboard.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Small_Cupboard.Category.Set(BuildPieceCategory.Furniture);
+
+            BuildPiece GB_Large_Crate = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Crate");
+            GB_Large_Crate.Tool.Add("GB_Parchment_Tool");
+            GB_Large_Crate.RequiredItems.Add("Wood", 10, true);
+            GB_Large_Crate.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Large_Crate.Category.Set(BuildPieceCategory.Furniture);
+
 
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "sfx_openbag");
 
