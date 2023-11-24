@@ -19,7 +19,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.2.2";
+        private const string ModVersion = "1.2.3";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -146,12 +146,6 @@ namespace OdinsKingdom
             GB_Stone_Round_Tile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Round_Tile.Category.Set("Stone Building");
 
-            BuildPiece GB_Stone_Angle_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Angle_Floor");
-            GB_Stone_Angle_Floor.Tool.Add("GB_Parchment_Tool");
-            GB_Stone_Angle_Floor.RequiredItems.Add("Stone", 3, true);
-            GB_Stone_Angle_Floor.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Stone_Angle_Floor.Category.Set("Stone Building");
-
             BuildPiece GB_Large_Solid_Wood_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Solid_Wood_Floor");
             GB_Large_Solid_Wood_Floor.Tool.Add("GB_Parchment_Tool");
             GB_Large_Solid_Wood_Floor.RequiredItems.Add("Wood", 16, true);
@@ -171,12 +165,6 @@ namespace OdinsKingdom
             GB_Solid_Wood_Round_Tile.RequiredItems.Add("Wood", 4, true);
             GB_Solid_Wood_Round_Tile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Solid_Wood_Round_Tile.Category.Set("Wood Building");
-
-            BuildPiece GB_Wood_Angle_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Angle_Floor");
-            GB_Wood_Angle_Floor.Tool.Add("GB_Parchment_Tool");
-            GB_Wood_Angle_Floor.RequiredItems.Add("Wood", 3, true);
-            GB_Wood_Angle_Floor.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Angle_Floor.Category.Set("Wood Building");
 
             BuildPiece GB_Solid_Wood_Tile = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Solid_Wood_Tile");
             GB_Solid_Wood_Tile.Tool.Add("GB_Parchment_Tool");
