@@ -1,14 +1,17 @@
 ﻿using System;
+using System.IO;
 using System.Linq;
 using System.Reflection;
 using BepInEx;
 using BepInEx.Configuration;
-using UnityEngine;
-using ServerSync;
+using BepInEx.Logging;
 using HarmonyLib;
 using ItemManager;
-using PieceManager;
 using LocalizationManager;
+using PieceManager;
+using ServerSync;
+using UnityEngine;
+using PrefabManager = ItemManager.PrefabManager;
 using System.Text;
 
 namespace OdinsKingdom
@@ -50,7 +53,6 @@ namespace OdinsKingdom
         public void Awake()
         {
             Localizer.Load();
-
 
 
             Item GB_Parchment_Tool = new("gbcastles", "GB_Parchment_Tool");
