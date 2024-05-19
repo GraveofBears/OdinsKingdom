@@ -1473,60 +1473,60 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Broken_1.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Pillar_Broken_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Broken_1.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Stone_Pillar_Broken_1FabWNT = GB_Stone_Pillar_Broken_1.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageImmune = true;
+            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_Broken_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Broken_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Broken_2");
             GB_Stone_Pillar_Broken_2.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Pillar_Broken_2.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Pillar_Broken_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Broken_2.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Stone_Pillar_Broken_2FabWNT = GB_Stone_Pillar_Broken_2.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageImmune = true;
+            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_Broken_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Broken = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Broken");
             GB_Stone_Wall_Broken.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Wall_Broken.RequiredItems.Add("Stone", 2, true);
             GB_Stone_Wall_Broken.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Broken.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Stone_Wall_BrokenFabWNT = GB_Stone_Wall_Broken.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Wall_BrokenFabWNT.m_ashDamageImmune = true;
+            GB_Stone_Wall_BrokenFabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_BrokenFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Corbel = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Corbel");
             GB_Stone_RoundWall_Corbel.Tool.Add("GB_Parchment_Tool");
             GB_Stone_RoundWall_Corbel.RequiredItems.Add("Stone", 4, true);
             GB_Stone_RoundWall_Corbel.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Corbel.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Stone_RoundWall_CorbelFabWNT = GB_Stone_RoundWall_Corbel.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageImmune = true;
+            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageResist = true;
+            GB_Stone_RoundWall_CorbelFabWNT.m_burnable = false;
 
             BuildPiece GB_Wall_Corbel_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Corbel_1");
             GB_Wall_Corbel_1.Tool.Add("GB_Parchment_Tool");
             GB_Wall_Corbel_1.RequiredItems.Add("Stone", 1, true);
             GB_Wall_Corbel_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wall_Corbel_1.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Wall_Corbel_1FabWNT = GB_Wall_Corbel_1.Prefab.GetComponent<WearNTear>();
+            GB_Wall_Corbel_1FabWNT.m_ashDamageImmune = true;
+            GB_Wall_Corbel_1FabWNT.m_ashDamageResist = true;
+            GB_Wall_Corbel_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Wall_Corbel_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Corbel_2");
             GB_Wall_Corbel_2.Tool.Add("GB_Parchment_Tool");
             GB_Wall_Corbel_2.RequiredItems.Add("Stone", 1, true);
             GB_Wall_Corbel_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wall_Corbel_2.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Wall_Corbel_2FabWNT = GB_Wall_Corbel_2.Prefab.GetComponent<WearNTear>();
+            GB_Wall_Corbel_2FabWNT.m_ashDamageImmune = true;
+            GB_Wall_Corbel_2FabWNT.m_ashDamageResist = true;
+            GB_Wall_Corbel_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Tapestry_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Tapestry_1");
             GB_Tapestry_1.Tool.Add("GB_Parchment_Tool");
@@ -1557,10 +1557,10 @@ namespace OdinsKingdom
             GB_Stone_Chimney.RequiredItems.Add("Stone", 10, true);
             GB_Stone_Chimney.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Chimney.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Stone_ChimneyFabWNT = GB_Stone_Chimney.Prefab.GetComponent<WearNTear>();
+            GB_Stone_ChimneyFabWNT.m_ashDamageImmune = true;
+            GB_Stone_ChimneyFabWNT.m_ashDamageResist = true;
+            GB_Stone_ChimneyFabWNT.m_burnable = false;
 
             BuildPiece GB_Marble_Fireplace = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Marble_Fireplace");
             GB_Marble_Fireplace.Tool.Add("GB_Parchment_Tool");
@@ -1568,10 +1568,10 @@ namespace OdinsKingdom
             GB_Marble_Fireplace.RequiredItems.Add("Stone", 10, true);
             GB_Marble_Fireplace.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Marble_Fireplace.Category.Set("Stone Building");
-            var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
-            GB_Large_Rock_PileFabWNT.m_burnable = false;
+            var GB_Marble_FireplaceFabWNT = GB_Marble_Fireplace.Prefab.GetComponent<WearNTear>();
+            GB_Marble_FireplaceFabWNT.m_ashDamageImmune = true;
+            GB_Marble_FireplaceFabWNT.m_ashDamageResist = true;
+            GB_Marble_FireplaceFabWNT.m_burnable = false;
 
             BuildPiece GB_Castle_Wood_Beam_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Wood_Beam_26");
             GB_Castle_Wood_Beam_26.Tool.Add("GB_Parchment_Tool");
