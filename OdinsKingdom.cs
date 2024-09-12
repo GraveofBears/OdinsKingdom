@@ -22,7 +22,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.2.22";
+        private const string ModVersion = "1.2.27";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -54,8 +54,8 @@ namespace OdinsKingdom
             GB_Large_Gate.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Gate.Category.Set("Stone Building");
             var GB_Large_GateFabWNT = GB_Large_Gate.Prefab.GetComponent<WearNTear>();
-            GB_Large_GateFabWNT.m_ashDamageImmune = true;
-            GB_Large_GateFabWNT.m_ashDamageResist = true;
+            GB_Large_GateFabWNT.m_ashDamageImmune = false;
+            GB_Large_GateFabWNT.m_ashDamageResist = false;
             GB_Large_GateFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Gate_Bridge = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Gate_Bridge");
@@ -67,8 +67,8 @@ namespace OdinsKingdom
             GB_Large_Gate_Bridge.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Gate_Bridge.Category.Set("Stone Building");
             var GB_Large_Gate_BridgeFabWNT = GB_Large_Gate_Bridge.Prefab.GetComponent<WearNTear>();
-            GB_Large_Gate_BridgeFabWNT.m_ashDamageImmune = true;
-            GB_Large_Gate_BridgeFabWNT.m_ashDamageResist = true;
+            GB_Large_Gate_BridgeFabWNT.m_ashDamageImmune = false;
+            GB_Large_Gate_BridgeFabWNT.m_ashDamageResist = false;
             GB_Large_Gate_BridgeFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Portcullis = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Portcullis");
@@ -79,8 +79,8 @@ namespace OdinsKingdom
             GB_Large_Portcullis.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Portcullis.Category.Set("Stone Building");
             var GB_Large_PortcullisFabWNT = GB_Large_Portcullis.Prefab.GetComponent<WearNTear>();
-            GB_Large_PortcullisFabWNT.m_ashDamageImmune = true;
-            GB_Large_PortcullisFabWNT.m_ashDamageResist = true;
+            GB_Large_PortcullisFabWNT.m_ashDamageImmune = false;
+            GB_Large_PortcullisFabWNT.m_ashDamageResist = false;
             GB_Large_PortcullisFabWNT.m_burnable = false;
 
             BuildPiece GB_StoneWindow = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_StoneWindow");
@@ -90,8 +90,8 @@ namespace OdinsKingdom
             GB_StoneWindow.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_StoneWindow.Category.Set("Stone Building");
             var GB_StoneWindowFabWNT = GB_StoneWindow.Prefab.GetComponent<WearNTear>();
-            GB_StoneWindowFabWNT.m_ashDamageImmune = true;
-            GB_StoneWindowFabWNT.m_ashDamageResist = true;
+            GB_StoneWindowFabWNT.m_ashDamageImmune = false;
+            GB_StoneWindowFabWNT.m_ashDamageResist = false;
             GB_StoneWindowFabWNT.m_burnable = false;
 
             BuildPiece GB_StoneWindow_OdinPlus = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_StoneWindow_OdinPlus");
@@ -101,8 +101,8 @@ namespace OdinsKingdom
             GB_StoneWindow_OdinPlus.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_StoneWindow_OdinPlus.Category.Set("Stone Building");
             var GB_StoneWindow_OdinPlusFabWNT = GB_StoneWindow_OdinPlus.Prefab.GetComponent<WearNTear>();
-            GB_StoneWindow_OdinPlusFabWNT.m_ashDamageImmune = true;
-            GB_StoneWindow_OdinPlusFabWNT.m_ashDamageResist = true;
+            GB_StoneWindow_OdinPlusFabWNT.m_ashDamageImmune = false;
+            GB_StoneWindow_OdinPlusFabWNT.m_ashDamageResist = false;
             GB_StoneWindow_OdinPlusFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Window_OdinPlus = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Window_OdinPlus");
@@ -112,8 +112,8 @@ namespace OdinsKingdom
             GB_Large_Window_OdinPlus.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Window_OdinPlus.Category.Set("Stone Building");
             var GB_Large_Window_OdinPlusFabWNT = GB_StoneWindow_OdinPlus.Prefab.GetComponent<WearNTear>();
-            GB_Large_Window_OdinPlusFabWNT.m_ashDamageImmune = true;
-            GB_Large_Window_OdinPlusFabWNT.m_ashDamageResist = true;
+            GB_Large_Window_OdinPlusFabWNT.m_ashDamageImmune = false;
+            GB_Large_Window_OdinPlusFabWNT.m_ashDamageResist = false;
             GB_Large_Window_OdinPlusFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Window = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Window");
@@ -123,8 +123,8 @@ namespace OdinsKingdom
             GB_Large_Window.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Window.Category.Set("Stone Building");
             var GB_Large_WindowFabWNT = GB_Large_Window.Prefab.GetComponent<WearNTear>();
-            GB_Large_WindowFabWNT.m_ashDamageImmune = true;
-            GB_Large_WindowFabWNT.m_ashDamageResist = true;
+            GB_Large_WindowFabWNT.m_ashDamageImmune = false;
+            GB_Large_WindowFabWNT.m_ashDamageResist = false;
             GB_Large_WindowFabWNT.m_burnable = false;
 
             BuildPiece GB_Archway_Wall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Archway_Wall");
@@ -133,8 +133,8 @@ namespace OdinsKingdom
             GB_Archway_Wall.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Archway_Wall.Category.Set("Stone Building");
             var GB_Archway_WallFabWNT = GB_Archway_Wall.Prefab.GetComponent<WearNTear>();
-            GB_Archway_WallFabWNT.m_ashDamageImmune = true;
-            GB_Archway_WallFabWNT.m_ashDamageResist = true;
+            GB_Archway_WallFabWNT.m_ashDamageImmune = false;
+            GB_Archway_WallFabWNT.m_ashDamageResist = false;
             GB_Archway_WallFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Tile_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Tile_Floor");
@@ -144,8 +144,8 @@ namespace OdinsKingdom
             GB_Large_Tile_Floor.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Tile_Floor.Category.Set("Stone Building");
             var GB_Large_Tile_FloorFabWNT = GB_Large_Tile_Floor.Prefab.GetComponent<WearNTear>();
-            GB_Large_Tile_FloorFabWNT.m_ashDamageImmune = true;
-            GB_Large_Tile_FloorFabWNT.m_ashDamageResist = true;
+            GB_Large_Tile_FloorFabWNT.m_ashDamageImmune = false;
+            GB_Large_Tile_FloorFabWNT.m_ashDamageResist = false;
             GB_Large_Tile_FloorFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Tile_4x4 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Tile_4x4");
@@ -155,8 +155,8 @@ namespace OdinsKingdom
             GB_Stone_Tile_4x4.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Tile_4x4.Category.Set("Stone Building");
             var GB_Stone_Tile_4x4FabWNT = GB_Stone_Tile_4x4.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Tile_4x4FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Tile_4x4FabWNT.m_ashDamageResist = true;
+            GB_Stone_Tile_4x4FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Tile_4x4FabWNT.m_ashDamageResist = false;
             GB_Stone_Tile_4x4FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Tile = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Tile");
@@ -165,8 +165,8 @@ namespace OdinsKingdom
             GB_Stone_Tile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Tile.Category.Set("Stone Building");
             var GB_Stone_TileFabWNT = GB_Stone_Tile.Prefab.GetComponent<WearNTear>();
-            GB_Stone_TileFabWNT.m_ashDamageImmune = true;
-            GB_Stone_TileFabWNT.m_ashDamageResist = true;
+            GB_Stone_TileFabWNT.m_ashDamageImmune = false;
+            GB_Stone_TileFabWNT.m_ashDamageResist = false;
             GB_Stone_TileFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Tile_1x1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Tile_1x1");
@@ -175,8 +175,8 @@ namespace OdinsKingdom
             GB_Stone_Tile_1x1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Tile_1x1.Category.Set("Stone Building");
             var GB_Stone_Tile_1x1FabWNT = GB_Stone_Tile_1x1.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Tile_1x1FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Tile_1x1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Tile_1x1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Tile_1x1FabWNT.m_ashDamageResist = false;
             GB_Stone_Tile_1x1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Angle_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Angle_Floor");
@@ -185,8 +185,8 @@ namespace OdinsKingdom
             GB_Stone_Angle_Floor.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Angle_Floor.Category.Set("Stone Building");
             var GB_Stone_Angle_FloorFabWNT = GB_Stone_Angle_Floor.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Angle_FloorFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Angle_FloorFabWNT.m_ashDamageResist = true;
+            GB_Stone_Angle_FloorFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Angle_FloorFabWNT.m_ashDamageResist = false;
             GB_Stone_Angle_FloorFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Angle_Tile_1x1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Angle_Tile_1x1");
@@ -195,8 +195,8 @@ namespace OdinsKingdom
             GB_Stone_Angle_Tile_1x1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Angle_Tile_1x1.Category.Set("Stone Building");
             var GB_Stone_Angle_Tile_1x1FabWNT = GB_Stone_Angle_Tile_1x1.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Angle_Tile_1x1FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Angle_Tile_1x1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Angle_Tile_1x1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Angle_Tile_1x1FabWNT.m_ashDamageResist = false;
             GB_Stone_Angle_Tile_1x1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Round_Tile = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Round_Tile");
@@ -205,8 +205,8 @@ namespace OdinsKingdom
             GB_Stone_Round_Tile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Round_Tile.Category.Set("Stone Building");
             var GB_Stone_Round_TileFabWNT = GB_Stone_Round_Tile.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Round_TileFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Round_TileFabWNT.m_ashDamageResist = true;
+            GB_Stone_Round_TileFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Round_TileFabWNT.m_ashDamageResist = false;
             GB_Stone_Round_TileFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Solid_Wood_Floor = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Solid_Wood_Floor");
@@ -271,8 +271,8 @@ namespace OdinsKingdom
             GB_Stone_Arch.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Arch.Category.Set("Stone Building");
             var GB_Stone_ArchFabWNT = GB_Stone_Arch.Prefab.GetComponent<WearNTear>();
-            GB_Stone_ArchFabWNT.m_ashDamageImmune = true;
-            GB_Stone_ArchFabWNT.m_ashDamageResist = true;
+            GB_Stone_ArchFabWNT.m_ashDamageImmune = false;
+            GB_Stone_ArchFabWNT.m_ashDamageResist = false;
             GB_Stone_ArchFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Doorframe = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Doorframe");
@@ -281,8 +281,8 @@ namespace OdinsKingdom
             GB_Stone_Doorframe.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Doorframe.Category.Set("Stone Building");
             var GB_Stone_DoorframeFabWNT = GB_Stone_Doorframe.Prefab.GetComponent<WearNTear>();
-            GB_Stone_DoorframeFabWNT.m_ashDamageImmune = true;
-            GB_Stone_DoorframeFabWNT.m_ashDamageResist = true;
+            GB_Stone_DoorframeFabWNT.m_ashDamageImmune = false;
+            GB_Stone_DoorframeFabWNT.m_ashDamageResist = false;
             GB_Stone_DoorframeFabWNT.m_burnable = false;
 
             BuildPiece GB_StoneWall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_StoneWall");
@@ -291,8 +291,8 @@ namespace OdinsKingdom
             GB_StoneWall.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_StoneWall.Category.Set("Stone Building");
             var GB_StoneWallFabWNT = GB_StoneWall.Prefab.GetComponent<WearNTear>();
-            GB_StoneWallFabWNT.m_ashDamageImmune = true;
-            GB_StoneWallFabWNT.m_ashDamageResist = true;
+            GB_StoneWallFabWNT.m_ashDamageImmune = false;
+            GB_StoneWallFabWNT.m_ashDamageResist = false;
             GB_StoneWallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Circle_Window = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Circle_Window");
@@ -302,8 +302,8 @@ namespace OdinsKingdom
             GB_Stone_Circle_Window.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Circle_Window.Category.Set("Stone Building");
             var GB_Stone_Circle_WindowFabWNT = GB_Stone_Circle_Window.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Circle_WindowFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Circle_WindowFabWNT.m_ashDamageResist = true;
+            GB_Stone_Circle_WindowFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Circle_WindowFabWNT.m_ashDamageResist = false;
             GB_Stone_Circle_WindowFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Aperture = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Aperture");
@@ -312,8 +312,8 @@ namespace OdinsKingdom
             GB_Stone_Aperture.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Aperture.Category.Set("Stone Building");
             var GB_Stone_ApertureFabWNT = GB_Stone_Aperture.Prefab.GetComponent<WearNTear>();
-            GB_Stone_ApertureFabWNT.m_ashDamageImmune = true;
-            GB_Stone_ApertureFabWNT.m_ashDamageResist = true;
+            GB_Stone_ApertureFabWNT.m_ashDamageImmune = false;
+            GB_Stone_ApertureFabWNT.m_ashDamageResist = false;
             GB_Stone_ApertureFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Halfwall_Aperture = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Halfwall_Aperture");
@@ -322,8 +322,8 @@ namespace OdinsKingdom
             GB_Stone_Halfwall_Aperture.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Halfwall_Aperture.Category.Set("Stone Building");
             var GB_Stone_Halfwall_ApertureFabWNT = GB_Stone_Halfwall_Aperture.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Halfwall_ApertureFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Halfwall_ApertureFabWNT.m_ashDamageResist = true;
+            GB_Stone_Halfwall_ApertureFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Halfwall_ApertureFabWNT.m_ashDamageResist = false;
             GB_Stone_Halfwall_ApertureFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Halfwall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Halfwall");
@@ -332,8 +332,8 @@ namespace OdinsKingdom
             GB_Stone_Halfwall.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Halfwall.Category.Set("Stone Building");
             var GB_Stone_HalfwallFabWNT = GB_Stone_Halfwall.Prefab.GetComponent<WearNTear>();
-            GB_Stone_HalfwallFabWNT.m_ashDamageImmune = true;
-            GB_Stone_HalfwallFabWNT.m_ashDamageResist = true;
+            GB_Stone_HalfwallFabWNT.m_ashDamageImmune = false;
+            GB_Stone_HalfwallFabWNT.m_ashDamageResist = false;
             GB_Stone_HalfwallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Halfwall_Arch = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Halfwall_Arch");
@@ -342,8 +342,8 @@ namespace OdinsKingdom
             GB_Stone_Halfwall_Arch.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Halfwall_Arch.Category.Set("Stone Building");
             var GB_Stone_Halfwall_ArchFabWNT = GB_Stone_Halfwall_Arch.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Halfwall_ArchFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Halfwall_ArchFabWNT.m_ashDamageResist = true;
+            GB_Stone_Halfwall_ArchFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Halfwall_ArchFabWNT.m_ashDamageResist = false;
             GB_Stone_Halfwall_ArchFabWNT.m_burnable = false;
 
             BuildPiece GB_Wooden_Ladder = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wooden_Ladder");
@@ -514,8 +514,8 @@ namespace OdinsKingdom
             GB_Hanging_Cage.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Hanging_Cage.Category.Set("Furniture");
             var GB_Hanging_CageFabWNT = GB_Hanging_Cage.Prefab.GetComponent<WearNTear>();
-            GB_Hanging_CageFabWNT.m_ashDamageImmune = true;
-            GB_Hanging_CageFabWNT.m_ashDamageResist = true;
+            GB_Hanging_CageFabWNT.m_ashDamageImmune = false;
+            GB_Hanging_CageFabWNT.m_ashDamageResist = false;
             GB_Hanging_CageFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Skull_Orn = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Skull_Orn");
@@ -525,8 +525,8 @@ namespace OdinsKingdom
             GB_Stone_Skull_Orn.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Skull_Orn.Category.Set("Deco");
             var GB_Stone_Skull_OrnFabWNT = GB_Stone_Skull_Orn.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Skull_OrnFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Skull_OrnFabWNT.m_ashDamageResist = true;
+            GB_Stone_Skull_OrnFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Skull_OrnFabWNT.m_ashDamageResist = false;
             GB_Stone_Skull_OrnFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Skeleton_Orn = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Skeleton_Orn");
@@ -536,8 +536,8 @@ namespace OdinsKingdom
             GB_Stone_Skeleton_Orn.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Skeleton_Orn.Category.Set("Deco");
             var GB_Stone_Skeleton_OrnFabWNT = GB_Stone_Skeleton_Orn.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Skeleton_OrnFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Skeleton_OrnFabWNT.m_ashDamageResist = true;
+            GB_Stone_Skeleton_OrnFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Skeleton_OrnFabWNT.m_ashDamageResist = false;
             GB_Stone_Skeleton_OrnFabWNT.m_burnable = false;
 
             BuildPiece GB_Hanging_Skeleton = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Skeleton");
@@ -591,8 +591,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_1x1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_1x1.Category.Set("Stone Building");
             var GB_Stone_Pillar_1x1FabWNT = GB_Stone_Pillar_1x1.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_1x1FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_1x1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_1x1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_1x1FabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_1x1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Base = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Base");
@@ -601,8 +601,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Base.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Base.Category.Set("Stone Building");
             var GB_Stone_Pillar_BaseFabWNT = GB_Stone_Pillar_Base.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_BaseFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_BaseFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_BaseFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_BaseFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_BaseFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Bottom = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Bottom");
@@ -611,8 +611,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Bottom.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Bottom.Category.Set("Stone Building");
             var GB_Stone_Pillar_BottomFabWNT = GB_Stone_Pillar_Bottom.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_BottomFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_BottomFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_BottomFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_BottomFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_BottomFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Middle = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Middle");
@@ -621,8 +621,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Middle.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Middle.Category.Set("Stone Building");
             var GB_Stone_Pillar_MiddleFabWNT = GB_Stone_Pillar_Middle.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_MiddleFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_MiddleFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_MiddleFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_MiddleFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_MiddleFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Small = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Small");
@@ -631,8 +631,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Small.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Small.Category.Set("Stone Building");
             var GB_Stone_Pillar_SmallFabWNT = GB_Stone_Pillar_Small.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_SmallFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_SmallFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_SmallFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_SmallFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_SmallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Top = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Top");
@@ -641,8 +641,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Top.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Top.Category.Set("Stone Building");
             var GB_Stone_Pillar_TopFabWNT = GB_Stone_Pillar_Top.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_TopFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_TopFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_TopFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_TopFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_TopFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Base_Round = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Base_Round");
@@ -651,8 +651,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Base_Round.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Base_Round.Category.Set("Stone Building");
             var GB_Stone_Pillar_Base_RoundFabWNT = GB_Stone_Pillar_Base_Round.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_Base_RoundFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_Base_RoundFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_Base_RoundFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_Base_RoundFabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_Base_RoundFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Square_Pillar_Middle = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Square_Pillar_Middle");
@@ -661,8 +661,8 @@ namespace OdinsKingdom
             GB_Stone_Square_Pillar_Middle.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Square_Pillar_Middle.Category.Set("Stone Building");
             var GB_Stone_Square_Pillar_MiddleFabWNT = GB_Stone_Square_Pillar_Middle.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Square_Pillar_MiddleFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Square_Pillar_MiddleFabWNT.m_ashDamageResist = true;
+            GB_Stone_Square_Pillar_MiddleFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Square_Pillar_MiddleFabWNT.m_ashDamageResist = false;
             GB_Stone_Square_Pillar_MiddleFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Table = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Table");
@@ -671,8 +671,8 @@ namespace OdinsKingdom
             GB_Stone_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Table.Category.Set("Furniture");
             var GB_Stone_TableFabWNT = GB_Stone_Table.Prefab.GetComponent<WearNTear>();
-            GB_Stone_TableFabWNT.m_ashDamageImmune = true;
-            GB_Stone_TableFabWNT.m_ashDamageResist = true;
+            GB_Stone_TableFabWNT.m_ashDamageImmune = false;
+            GB_Stone_TableFabWNT.m_ashDamageResist = false;
             GB_Stone_TableFabWNT.m_burnable = false;
 
             BuildPiece GB_Wooden_Awning = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wooden_Awning");
@@ -726,8 +726,8 @@ namespace OdinsKingdom
             GB_Stone_Fireplace.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Fireplace.Category.Set("Lights and Storage");
             var GB_Stone_FireplaceFabWNT = GB_Stone_Fireplace.Prefab.GetComponent<WearNTear>();
-            GB_Stone_FireplaceFabWNT.m_ashDamageImmune = true;
-            GB_Stone_FireplaceFabWNT.m_ashDamageResist = true;
+            GB_Stone_FireplaceFabWNT.m_ashDamageImmune = false;
+            GB_Stone_FireplaceFabWNT.m_ashDamageResist = false;
             GB_Stone_FireplaceFabWNT.m_burnable = false;
 
             BuildPiece GB_Wooden_Bucket = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wooden_Bucket");
@@ -748,8 +748,8 @@ namespace OdinsKingdom
             GB_Stone_Beam.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam.Category.Set("Stone Building");
             var GB_Stone_BeamFabWNT = GB_Stone_Beam.Prefab.GetComponent<WearNTear>();
-            GB_Stone_BeamFabWNT.m_ashDamageImmune = true;
-            GB_Stone_BeamFabWNT.m_ashDamageResist = true;
+            GB_Stone_BeamFabWNT.m_ashDamageImmune = false;
+            GB_Stone_BeamFabWNT.m_ashDamageResist = false;
             GB_Stone_BeamFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pole = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pole");
@@ -758,8 +758,8 @@ namespace OdinsKingdom
             GB_Stone_Pole.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pole.Category.Set("Stone Building");
             var GB_Stone_PoleFabWNT = GB_Stone_Pole.Prefab.GetComponent<WearNTear>();
-            GB_Stone_PoleFabWNT.m_ashDamageImmune = true;
-            GB_Stone_PoleFabWNT.m_ashDamageResist = true;
+            GB_Stone_PoleFabWNT.m_ashDamageImmune = false;
+            GB_Stone_PoleFabWNT.m_ashDamageResist = false;
             GB_Stone_PoleFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pole_Small = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pole_Small");
@@ -768,8 +768,8 @@ namespace OdinsKingdom
             GB_Stone_Pole_Small.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pole_Small.Category.Set("Stone Building");
             var GB_Stone_Pole_SmallFabWNT = GB_Stone_Pole_Small.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pole_SmallFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pole_SmallFabWNT.m_ashDamageResist = true;
+            GB_Stone_Pole_SmallFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pole_SmallFabWNT.m_ashDamageResist = false;
             GB_Stone_Pole_SmallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Beam_Small = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Beam_Small");
@@ -778,8 +778,8 @@ namespace OdinsKingdom
             GB_Stone_Beam_Small.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam_Small.Category.Set("Stone Building");
             var GB_Stone_Beam_SmallFabWNT = GB_Stone_Beam_Small.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Beam_SmallFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Beam_SmallFabWNT.m_ashDamageResist = true;
+            GB_Stone_Beam_SmallFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Beam_SmallFabWNT.m_ashDamageResist = false;
             GB_Stone_Beam_SmallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Beam_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Beam_26");
@@ -788,8 +788,8 @@ namespace OdinsKingdom
             GB_Stone_Beam_26.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam_26.Category.Set("Stone Building");
             var GB_Stone_Beam_26FabWNT = GB_Stone_Beam_26.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Beam_26FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Beam_26FabWNT.m_ashDamageResist = true;
+            GB_Stone_Beam_26FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Beam_26FabWNT.m_ashDamageResist = false;
             GB_Stone_Beam_26FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Beam_45 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Beam_45");
@@ -798,8 +798,8 @@ namespace OdinsKingdom
             GB_Stone_Beam_45.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam_45.Category.Set("Stone Building");
             var GB_Stone_Beam_45FabWNT = GB_Stone_Beam_45.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Beam_45FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Beam_45FabWNT.m_ashDamageResist = true;
+            GB_Stone_Beam_45FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Beam_45FabWNT.m_ashDamageResist = false;
             GB_Stone_Beam_45FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Roof_Top = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Roof_Top");
@@ -808,8 +808,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_Roof_Top.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Roof_Top.Category.Set("Stone Building");
             var GB_Stone_Wall_Roof_TopFabWNT = GB_Stone_Wall_Roof_Top.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_Roof_TopFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_Roof_TopFabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_Roof_TopFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_Roof_TopFabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_Roof_TopFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Roof_Top_45 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Roof_Top_45");
@@ -818,8 +818,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_Roof_Top_45.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Roof_Top_45.Category.Set("Stone Building");
             var GB_Stone_Wall_Roof_Top_45FabWNT = GB_Stone_Wall_Roof_Top_45.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_Roof_Top_45FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_Roof_Top_45FabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_Roof_Top_45FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_Roof_Top_45FabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_Roof_Top_45FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_26");
@@ -828,8 +828,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_26.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_26.Category.Set("Stone Building");
             var GB_Stone_Wall_26FabWNT = GB_Stone_Wall_26.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_26FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_26FabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_26FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_26FabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_26FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_45 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_45");
@@ -838,8 +838,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_45.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_45.Category.Set("Stone Building");
             var GB_Stone_Wall_45FabWNT = GB_Stone_Wall_45.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_45FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_45FabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_45FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_45FabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_45FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Invert_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Invert_26");
@@ -848,8 +848,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_Invert_26.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Invert_26.Category.Set("Stone Building");
             var GB_Stone_Wall_Invert_26FabWNT = GB_Stone_Wall_Invert_26.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_Invert_26FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_Invert_26FabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_Invert_26FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_Invert_26FabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_Invert_26FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Invert_45 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Invert_45");
@@ -858,8 +858,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_Invert_45.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Invert_45.Category.Set("Stone Building");
             var GB_Stone_Wall_Invert_45FabWNT = GB_Stone_Wall_Invert_45.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_Invert_45FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_Invert_45FabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_Invert_45FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_Invert_45FabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_Invert_45FabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Stone_Aperture = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Stone_Aperture");
@@ -868,8 +868,8 @@ namespace OdinsKingdom
             GB_Large_Stone_Aperture.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Stone_Aperture.Category.Set("Stone Building");
             var GB_Large_Stone_ApertureFabWNT = GB_Large_Stone_Aperture.Prefab.GetComponent<WearNTear>();
-            GB_Large_Stone_ApertureFabWNT.m_ashDamageImmune = true;
-            GB_Large_Stone_ApertureFabWNT.m_ashDamageResist = true;
+            GB_Large_Stone_ApertureFabWNT.m_ashDamageImmune = false;
+            GB_Large_Stone_ApertureFabWNT.m_ashDamageResist = false;
             GB_Large_Stone_ApertureFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_StoneWall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_StoneWall");
@@ -878,8 +878,8 @@ namespace OdinsKingdom
             GB_Large_StoneWall.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_StoneWall.Category.Set("Stone Building");
             var GB_Large_StoneWallFabWNT = GB_Large_StoneWall.Prefab.GetComponent<WearNTear>();
-            GB_Large_StoneWallFabWNT.m_ashDamageImmune = true;
-            GB_Large_StoneWallFabWNT.m_ashDamageResist = true;
+            GB_Large_StoneWallFabWNT.m_ashDamageImmune = false;
+            GB_Large_StoneWallFabWNT.m_ashDamageResist = false;
             GB_Large_StoneWallFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Halfwall_Battlement = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Halfwall_Battlement");
@@ -888,8 +888,8 @@ namespace OdinsKingdom
             GB_Stone_Halfwall_Battlement.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Halfwall_Battlement.Category.Set("Stone Building");
             var GB_Stone_Halfwall_BattlementFabWNT = GB_Stone_Halfwall_Battlement.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Halfwall_BattlementFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Halfwall_BattlementFabWNT.m_ashDamageResist = true;
+            GB_Stone_Halfwall_BattlementFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Halfwall_BattlementFabWNT.m_ashDamageResist = false;
             GB_Stone_Halfwall_BattlementFabWNT.m_burnable = false;
 
             BuildPiece GB_StoneWall_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_StoneWall_Door");
@@ -898,8 +898,8 @@ namespace OdinsKingdom
             GB_StoneWall_Door.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_StoneWall_Door.Category.Set("Stone Building");
             var GB_StoneWall_DoorFabWNT = GB_StoneWall_Door.Prefab.GetComponent<WearNTear>();
-            GB_StoneWall_DoorFabWNT.m_ashDamageImmune = true;
-            GB_StoneWall_DoorFabWNT.m_ashDamageResist = true;
+            GB_StoneWall_DoorFabWNT.m_ashDamageImmune = false;
+            GB_StoneWall_DoorFabWNT.m_ashDamageResist = false;
             GB_StoneWall_DoorFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_StoneWall_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_StoneWall_Door");
@@ -908,8 +908,8 @@ namespace OdinsKingdom
             GB_Large_StoneWall_Door.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_StoneWall_Door.Category.Set("Stone Building");
             var GB_Large_StoneWall_DoorFabWNT = GB_Large_StoneWall_Door.Prefab.GetComponent<WearNTear>();
-            GB_Large_StoneWall_DoorFabWNT.m_ashDamageImmune = true;
-            GB_Large_StoneWall_DoorFabWNT.m_ashDamageResist = true;
+            GB_Large_StoneWall_DoorFabWNT.m_ashDamageImmune = false;
+            GB_Large_StoneWall_DoorFabWNT.m_ashDamageResist = false;
             GB_Large_StoneWall_DoorFabWNT.m_burnable = false;
 
             BuildPiece GB_Wall_Shelf = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Shelf");
@@ -965,8 +965,8 @@ namespace OdinsKingdom
             GB_Stone_Stairs.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Stairs.Category.Set("Stone Building");
             var GB_Stone_StairsFabWNT = GB_Stone_Stairs.Prefab.GetComponent<WearNTear>();
-            GB_Stone_StairsFabWNT.m_ashDamageImmune = true;
-            GB_Stone_StairsFabWNT.m_ashDamageResist = true;
+            GB_Stone_StairsFabWNT.m_ashDamageImmune = false;
+            GB_Stone_StairsFabWNT.m_ashDamageResist = false;
             GB_Stone_StairsFabWNT.m_burnable = false;
 
             BuildPiece GB_Wood_Stairs = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Stairs");
@@ -981,8 +981,8 @@ namespace OdinsKingdom
             GB_Rock_Pole_Small.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Rock_Pole_Small.Category.Set("Stone Building");
             var GB_Rock_Pole_SmallFabWNT = GB_Rock_Pole_Small.Prefab.GetComponent<WearNTear>();
-            GB_Rock_Pole_SmallFabWNT.m_ashDamageImmune = true;
-            GB_Rock_Pole_SmallFabWNT.m_ashDamageResist = true;
+            GB_Rock_Pole_SmallFabWNT.m_ashDamageImmune = false;
+            GB_Rock_Pole_SmallFabWNT.m_ashDamageResist = false;
             GB_Rock_Pole_SmallFabWNT.m_burnable = false;
 
             BuildPiece GB_Rock_Pole = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rock_Pole");
@@ -991,8 +991,8 @@ namespace OdinsKingdom
             GB_Rock_Pole.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Rock_Pole.Category.Set("Stone Building");
             var GB_Rock_PoleFabWNT = GB_Rock_Pole.Prefab.GetComponent<WearNTear>();
-            GB_Rock_PoleFabWNT.m_ashDamageImmune = true;
-            GB_Rock_PoleFabWNT.m_ashDamageResist = true;
+            GB_Rock_PoleFabWNT.m_ashDamageImmune = false;
+            GB_Rock_PoleFabWNT.m_ashDamageResist = false;
             GB_Rock_PoleFabWNT.m_burnable = false;
 
             BuildPiece GB_Rock_Beam = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rock_Beam");
@@ -1001,8 +1001,8 @@ namespace OdinsKingdom
             GB_Rock_Beam.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Rock_Beam.Category.Set("Stone Building");
             var GB_Rock_BeamFabWNT = GB_Rock_Beam.Prefab.GetComponent<WearNTear>();
-            GB_Rock_BeamFabWNT.m_ashDamageImmune = true;
-            GB_Rock_BeamFabWNT.m_ashDamageResist = true;
+            GB_Rock_BeamFabWNT.m_ashDamageImmune = false;
+            GB_Rock_BeamFabWNT.m_ashDamageResist = false;
             GB_Rock_BeamFabWNT.m_burnable = false;
 
             BuildPiece GB_Rock_Beam_Small = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rock_Beam_Small");
@@ -1011,8 +1011,8 @@ namespace OdinsKingdom
             GB_Rock_Beam_Small.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Rock_Beam_Small.Category.Set("Stone Building");
             var GB_Rock_Beam_SmallFabWNT = GB_Rock_Beam_Small.Prefab.GetComponent<WearNTear>();
-            GB_Rock_Beam_SmallFabWNT.m_ashDamageImmune = true;
-            GB_Rock_Beam_SmallFabWNT.m_ashDamageResist = true;
+            GB_Rock_Beam_SmallFabWNT.m_ashDamageImmune = false;
+            GB_Rock_Beam_SmallFabWNT.m_ashDamageResist = false;
             GB_Rock_Beam_SmallFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Stone_Orn = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Stone_Orn");
@@ -1021,8 +1021,8 @@ namespace OdinsKingdom
             GB_Large_Stone_Orn.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Stone_Orn.Category.Set("Stone Building");
             var GB_Large_Stone_OrnFabWNT = GB_Large_Stone_Orn.Prefab.GetComponent<WearNTear>();
-            GB_Large_Stone_OrnFabWNT.m_ashDamageImmune = true;
-            GB_Large_Stone_OrnFabWNT.m_ashDamageResist = true;
+            GB_Large_Stone_OrnFabWNT.m_ashDamageImmune = false;
+            GB_Large_Stone_OrnFabWNT.m_ashDamageResist = false;
             GB_Large_Stone_OrnFabWNT.m_burnable = false;
 
             BuildPiece GB_Small_Wall_Orn = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Small_Wall_Orn");
@@ -1031,8 +1031,8 @@ namespace OdinsKingdom
             GB_Small_Wall_Orn.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Small_Wall_Orn.Category.Set("Stone Building");
             var GB_Small_Wall_OrnFabWNT = GB_Small_Wall_Orn.Prefab.GetComponent<WearNTear>();
-            GB_Small_Wall_OrnFabWNT.m_ashDamageImmune = true;
-            GB_Small_Wall_OrnFabWNT.m_ashDamageResist = true;
+            GB_Small_Wall_OrnFabWNT.m_ashDamageImmune = false;
+            GB_Small_Wall_OrnFabWNT.m_ashDamageResist = false;
             GB_Small_Wall_OrnFabWNT.m_burnable = false;
 
             BuildPiece GB_Wooden_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wooden_Door");
@@ -1061,8 +1061,8 @@ namespace OdinsKingdom
             GB_Iron_Floor_Grate.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Iron_Floor_Grate.Category.Set("Deco");
             var GB_Iron_Floor_GrateFabWNT = GB_Iron_Floor_Grate.Prefab.GetComponent<WearNTear>();
-            GB_Iron_Floor_GrateFabWNT.m_ashDamageImmune = true;
-            GB_Iron_Floor_GrateFabWNT.m_ashDamageResist = true;
+            GB_Iron_Floor_GrateFabWNT.m_ashDamageImmune = false;
+            GB_Iron_Floor_GrateFabWNT.m_ashDamageResist = false;
             GB_Iron_Floor_GrateFabWNT.m_burnable = false;
 
             BuildPiece GB_Castle_Rope_Fence = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Rope_Fence");
@@ -1078,8 +1078,8 @@ namespace OdinsKingdom
             GB_Iron_Fence.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Iron_Fence.Category.Set("Deco");
             var GB_Iron_FenceFabWNT = GB_Iron_Fence.Prefab.GetComponent<WearNTear>();
-            GB_Iron_FenceFabWNT.m_ashDamageImmune = true;
-            GB_Iron_FenceFabWNT.m_ashDamageResist = true;
+            GB_Iron_FenceFabWNT.m_ashDamageImmune = false;
+            GB_Iron_FenceFabWNT.m_ashDamageResist = false;
             GB_Iron_FenceFabWNT.m_burnable = false;
 
             BuildPiece GB_Iron_Fence_End = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Iron_Fence_End");
@@ -1088,8 +1088,8 @@ namespace OdinsKingdom
             GB_Iron_Fence_End.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Iron_Fence_End.Category.Set("Deco");
             var GB_Iron_Fence_EndFabWNT = GB_Iron_Fence_End.Prefab.GetComponent<WearNTear>();
-            GB_Iron_Fence_EndFabWNT.m_ashDamageImmune = true;
-            GB_Iron_Fence_EndFabWNT.m_ashDamageResist = true;
+            GB_Iron_Fence_EndFabWNT.m_ashDamageImmune = false;
+            GB_Iron_Fence_EndFabWNT.m_ashDamageResist = false;
             GB_Iron_Fence_EndFabWNT.m_burnable = false;
 
             BuildPiece GB_Iron_Fence_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Iron_Fence_Door");
@@ -1098,8 +1098,8 @@ namespace OdinsKingdom
             GB_Iron_Fence_Door.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Iron_Fence_Door.Category.Set("Deco");
             var GB_Iron_Fence_DoorFabWNT = GB_Iron_Fence_Door.Prefab.GetComponent<WearNTear>();
-            GB_Iron_Fence_DoorFabWNT.m_ashDamageImmune = true;
-            GB_Iron_Fence_DoorFabWNT.m_ashDamageResist = true;
+            GB_Iron_Fence_DoorFabWNT.m_ashDamageImmune = false;
+            GB_Iron_Fence_DoorFabWNT.m_ashDamageResist = false;
             GB_Iron_Fence_DoorFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Chest = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Chest");
@@ -1447,8 +1447,8 @@ namespace OdinsKingdom
             GB_Small_Rock_Pile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Small_Rock_Pile.Category.Set("Deco");
             var GB_Small_Rock_PileFabWNT = GB_Small_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Small_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Small_Rock_PileFabWNT.m_ashDamageResist = true;
+            GB_Small_Rock_PileFabWNT.m_ashDamageImmune = false;
+            GB_Small_Rock_PileFabWNT.m_ashDamageResist = false;
             GB_Small_Rock_PileFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Rock_Pile = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Rock_Pile");
@@ -1457,8 +1457,8 @@ namespace OdinsKingdom
             GB_Large_Rock_Pile.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Large_Rock_Pile.Category.Set("Deco");
             var GB_Large_Rock_PileFabWNT = GB_Large_Rock_Pile.Prefab.GetComponent<WearNTear>();
-            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = true;
-            GB_Large_Rock_PileFabWNT.m_ashDamageResist = true;
+            GB_Large_Rock_PileFabWNT.m_ashDamageImmune = false;
+            GB_Large_Rock_PileFabWNT.m_ashDamageResist = false;
             GB_Large_Rock_PileFabWNT.m_burnable = false;
 
             BuildPiece GB_Pile_O_Bones = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Pile_O_Bones");
@@ -1474,8 +1474,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Broken_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Broken_1.Category.Set("Stone Building");
             var GB_Stone_Pillar_Broken_1FabWNT = GB_Stone_Pillar_Broken_1.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_Broken_1FabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_Broken_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Broken_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Broken_2");
@@ -1484,8 +1484,8 @@ namespace OdinsKingdom
             GB_Stone_Pillar_Broken_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Pillar_Broken_2.Category.Set("Stone Building");
             var GB_Stone_Pillar_Broken_2FabWNT = GB_Stone_Pillar_Broken_2.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageResist = true;
+            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Pillar_Broken_2FabWNT.m_ashDamageResist = false;
             GB_Stone_Pillar_Broken_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Broken = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Broken");
@@ -1494,8 +1494,8 @@ namespace OdinsKingdom
             GB_Stone_Wall_Broken.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Broken.Category.Set("Stone Building");
             var GB_Stone_Wall_BrokenFabWNT = GB_Stone_Wall_Broken.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Wall_BrokenFabWNT.m_ashDamageImmune = true;
-            GB_Stone_Wall_BrokenFabWNT.m_ashDamageResist = true;
+            GB_Stone_Wall_BrokenFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_BrokenFabWNT.m_ashDamageResist = false;
             GB_Stone_Wall_BrokenFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Corbel = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Corbel");
@@ -1504,8 +1504,8 @@ namespace OdinsKingdom
             GB_Stone_RoundWall_Corbel.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Corbel.Category.Set("Stone Building");
             var GB_Stone_RoundWall_CorbelFabWNT = GB_Stone_RoundWall_Corbel.Prefab.GetComponent<WearNTear>();
-            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageImmune = true;
-            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageResist = true;
+            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_CorbelFabWNT.m_ashDamageResist = false;
             GB_Stone_RoundWall_CorbelFabWNT.m_burnable = false;
 
             BuildPiece GB_Wall_Corbel_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Corbel_1");
@@ -1514,8 +1514,8 @@ namespace OdinsKingdom
             GB_Wall_Corbel_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wall_Corbel_1.Category.Set("Stone Building");
             var GB_Wall_Corbel_1FabWNT = GB_Wall_Corbel_1.Prefab.GetComponent<WearNTear>();
-            GB_Wall_Corbel_1FabWNT.m_ashDamageImmune = true;
-            GB_Wall_Corbel_1FabWNT.m_ashDamageResist = true;
+            GB_Wall_Corbel_1FabWNT.m_ashDamageImmune = false;
+            GB_Wall_Corbel_1FabWNT.m_ashDamageResist = false;
             GB_Wall_Corbel_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Wall_Corbel_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Corbel_2");
@@ -1524,8 +1524,8 @@ namespace OdinsKingdom
             GB_Wall_Corbel_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wall_Corbel_2.Category.Set("Stone Building");
             var GB_Wall_Corbel_2FabWNT = GB_Wall_Corbel_2.Prefab.GetComponent<WearNTear>();
-            GB_Wall_Corbel_2FabWNT.m_ashDamageImmune = true;
-            GB_Wall_Corbel_2FabWNT.m_ashDamageResist = true;
+            GB_Wall_Corbel_2FabWNT.m_ashDamageImmune = false;
+            GB_Wall_Corbel_2FabWNT.m_ashDamageResist = false;
             GB_Wall_Corbel_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Tapestry_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Tapestry_1");
@@ -1558,8 +1558,8 @@ namespace OdinsKingdom
             GB_Stone_Chimney.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Chimney.Category.Set("Stone Building");
             var GB_Stone_ChimneyFabWNT = GB_Stone_Chimney.Prefab.GetComponent<WearNTear>();
-            GB_Stone_ChimneyFabWNT.m_ashDamageImmune = true;
-            GB_Stone_ChimneyFabWNT.m_ashDamageResist = true;
+            GB_Stone_ChimneyFabWNT.m_ashDamageImmune = false;
+            GB_Stone_ChimneyFabWNT.m_ashDamageResist = false;
             GB_Stone_ChimneyFabWNT.m_burnable = false;
 
             BuildPiece GB_Marble_Fireplace = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Marble_Fireplace");
@@ -1569,8 +1569,8 @@ namespace OdinsKingdom
             GB_Marble_Fireplace.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Marble_Fireplace.Category.Set("Stone Building");
             var GB_Marble_FireplaceFabWNT = GB_Marble_Fireplace.Prefab.GetComponent<WearNTear>();
-            GB_Marble_FireplaceFabWNT.m_ashDamageImmune = true;
-            GB_Marble_FireplaceFabWNT.m_ashDamageResist = true;
+            GB_Marble_FireplaceFabWNT.m_ashDamageImmune = false;
+            GB_Marble_FireplaceFabWNT.m_ashDamageResist = false;
             GB_Marble_FireplaceFabWNT.m_burnable = false;
 
             BuildPiece GB_Castle_Wood_Beam_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Wood_Beam_26");
@@ -1652,8 +1652,8 @@ namespace OdinsKingdom
             GB_Tower_Floor_Deco.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Tower_Floor_Deco.Category.Set("Deco");
             var GB_Tower_Floor_DecoFabWNT = GB_Tower_Floor_Deco.Prefab.GetComponent<WearNTear>();
-            GB_Tower_Floor_DecoFabWNT.m_ashDamageImmune = true;
-            GB_Tower_Floor_DecoFabWNT.m_ashDamageResist = true;
+            GB_Tower_Floor_DecoFabWNT.m_ashDamageImmune = false;
+            GB_Tower_Floor_DecoFabWNT.m_ashDamageResist = false;
             GB_Tower_Floor_DecoFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Floor_Deco_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Floor_Deco_1");
@@ -1662,8 +1662,8 @@ namespace OdinsKingdom
             GB_Stone_Floor_Deco_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Floor_Deco_1.Category.Set("Deco");
             var GB_Stone_Floor_Deco_1FabWNT = GB_Stone_Floor_Deco_1.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Floor_Deco_1FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Floor_Deco_1FabWNT.m_ashDamageResist = true;
+            GB_Stone_Floor_Deco_1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Floor_Deco_1FabWNT.m_ashDamageResist = false;
             GB_Stone_Floor_Deco_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Floor_Deco_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Floor_Deco_2");
@@ -1672,8 +1672,8 @@ namespace OdinsKingdom
             GB_Stone_Floor_Deco_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Floor_Deco_2.Category.Set("Deco");
             var GB_Stone_Floor_Deco_2FabWNT = GB_Stone_Floor_Deco_2.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Floor_Deco_2FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Floor_Deco_2FabWNT.m_ashDamageResist = true;
+            GB_Stone_Floor_Deco_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Floor_Deco_2FabWNT.m_ashDamageResist = false;
             GB_Stone_Floor_Deco_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Floor_Deco_3 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Floor_Deco_3");
@@ -1682,8 +1682,8 @@ namespace OdinsKingdom
             GB_Stone_Floor_Deco_3.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Floor_Deco_3.Category.Set("Deco");
             var GB_Stone_Floor_Deco_3FabWNT = GB_Stone_Floor_Deco_3.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Floor_Deco_3FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Floor_Deco_3FabWNT.m_ashDamageResist = true;
+            GB_Stone_Floor_Deco_3FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Floor_Deco_3FabWNT.m_ashDamageResist = false;
             GB_Stone_Floor_Deco_3FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Floor_Deco_4 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Floor_Deco_4");
@@ -1692,8 +1692,8 @@ namespace OdinsKingdom
             GB_Stone_Floor_Deco_4.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Floor_Deco_4.Category.Set("Deco");
             var GB_Stone_Floor_Deco_4FabWNT = GB_Stone_Floor_Deco_4.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Floor_Deco_4FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Floor_Deco_4FabWNT.m_ashDamageResist = true;
+            GB_Stone_Floor_Deco_4FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Floor_Deco_4FabWNT.m_ashDamageResist = false;
             GB_Stone_Floor_Deco_4FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Floor_Deco_5 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Floor_Deco_5");
@@ -1702,8 +1702,8 @@ namespace OdinsKingdom
             GB_Stone_Floor_Deco_5.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Floor_Deco_5.Category.Set("Deco");
             var GB_Stone_Floor_Deco_5FabWNT = GB_Stone_Floor_Deco_5.Prefab.GetComponent<WearNTear>();
-            GB_Stone_Floor_Deco_5FabWNT.m_ashDamageImmune = true;
-            GB_Stone_Floor_Deco_5FabWNT.m_ashDamageResist = true;
+            GB_Stone_Floor_Deco_5FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Floor_Deco_5FabWNT.m_ashDamageResist = false;
             GB_Stone_Floor_Deco_5FabWNT.m_burnable = false;
 
             BuildPiece GB_CobWebs = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_CobWebs");
@@ -1728,8 +1728,8 @@ namespace OdinsKingdom
             GB_Ship_Gate.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Ship_Gate.Category.Set("Deco");
             var GB_Ship_GateFabWNT = GB_Ship_Gate.Prefab.GetComponent<WearNTear>();
-            GB_Ship_GateFabWNT.m_ashDamageImmune = true;
-            GB_Ship_GateFabWNT.m_ashDamageResist = true;
+            GB_Ship_GateFabWNT.m_ashDamageImmune = false;
+            GB_Ship_GateFabWNT.m_ashDamageResist = false;
             GB_Ship_GateFabWNT.m_burnable = false;
 
             BuildPiece GB_Castle_Glass_Roof_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Glass_Roof_26");
@@ -1754,8 +1754,8 @@ namespace OdinsKingdom
             GB_Stone_Cross.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Cross.Category.Set("Deco");
             var GB_Stone_CrossFabWNT = GB_Stone_Cross.Prefab.GetComponent<WearNTear>();
-            GB_Stone_CrossFabWNT.m_ashDamageImmune = true;
-            GB_Stone_CrossFabWNT.m_ashDamageResist = true;
+            GB_Stone_CrossFabWNT.m_ashDamageImmune = false;
+            GB_Stone_CrossFabWNT.m_ashDamageResist = false;
             GB_Stone_CrossFabWNT.m_burnable = false;
 
             BuildPiece GB_Hidden_Floor_Hatch = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hidden_Floor_Hatch");
@@ -1770,8 +1770,8 @@ namespace OdinsKingdom
             GB_Hidden_Stone_Hatch.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Hidden_Stone_Hatch.Category.Set("Stone Building");
             var GB_Hidden_Stone_HatchFabWNT = GB_Hidden_Stone_Hatch.Prefab.GetComponent<WearNTear>();
-            GB_Hidden_Stone_HatchFabWNT.m_ashDamageImmune = true;
-            GB_Hidden_Stone_HatchFabWNT.m_ashDamageResist = true;
+            GB_Hidden_Stone_HatchFabWNT.m_ashDamageImmune = false;
+            GB_Hidden_Stone_HatchFabWNT.m_ashDamageResist = false;
             GB_Hidden_Stone_HatchFabWNT.m_burnable = false;
 
             BuildPiece GB_Ivy_Bush = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Ivy_Bush");
@@ -1787,8 +1787,8 @@ namespace OdinsKingdom
             GB_Castle_Hearth.Crafting.Set(PieceManager.CraftingTable.StoneCutter);
             GB_Castle_Hearth.Category.Set("Lights and Storage");
             var GB_Castle_HearthFabWNT = GB_Castle_Hearth.Prefab.GetComponent<WearNTear>();
-            GB_Castle_HearthFabWNT.m_ashDamageImmune = true;
-            GB_Castle_HearthFabWNT.m_ashDamageResist = true;
+            GB_Castle_HearthFabWNT.m_ashDamageImmune = false;
+            GB_Castle_HearthFabWNT.m_ashDamageResist = false;
             GB_Castle_HearthFabWNT.m_burnable = false;
 
             BuildPiece GB_Fire_Pit = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Fire_Pit");
@@ -1797,8 +1797,8 @@ namespace OdinsKingdom
             GB_Fire_Pit.RequiredItems.Add("Wood", 2, true);
             GB_Fire_Pit.Category.Set("Lights and Storage");
             var GB_Fire_PitFabWNT = GB_Fire_Pit.Prefab.GetComponent<WearNTear>();
-            GB_Fire_PitFabWNT.m_ashDamageImmune = true;
-            GB_Fire_PitFabWNT.m_ashDamageResist = true;
+            GB_Fire_PitFabWNT.m_ashDamageImmune = false;
+            GB_Fire_PitFabWNT.m_ashDamageResist = false;
             GB_Fire_PitFabWNT.m_burnable = false;
 
             BuildPiece GB_Large_Crate = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Crate");
@@ -1929,6 +1929,52 @@ namespace OdinsKingdom
             GB_Wood_RoundWall_Third.RequiredItems.Add("Wood", 6, true);
             GB_Wood_RoundWall_Third.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wood_RoundWall_Third.Category.Set("Wood Building");
+
+            BuildPiece GB_Surtling_Lantern = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Surtling_Lantern");
+            GB_Surtling_Lantern.Tool.Add("GB_Parchment_Tool");
+            GB_Surtling_Lantern.RequiredItems.Add("SurtlingCore", 2, true);
+            GB_Surtling_Lantern.RequiredItems.Add("Wood", 2, true);
+            GB_Surtling_Lantern.Category.Set("Lights and Storage");
+            var GB_Surtling_LanternFabWNT = GB_Surtling_Lantern.Prefab.GetComponent<WearNTear>();
+            GB_Surtling_LanternFabWNT.m_ashDamageImmune = false;
+            GB_Surtling_LanternFabWNT.m_ashDamageResist = false;
+            GB_Surtling_LanternFabWNT.m_burnable = false;
+
+            BuildPiece GB_Surtling_Lantern_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Surtling_Lantern_2");
+            GB_Surtling_Lantern_2.Tool.Add("GB_Parchment_Tool");
+            GB_Surtling_Lantern_2.RequiredItems.Add("SurtlingCore", 2, true);
+            GB_Surtling_Lantern_2.RequiredItems.Add("Wood", 1, true);
+            GB_Surtling_Lantern_2.Category.Set("Lights and Storage");
+            var GB_Surtling_Lantern_2FabWNT = GB_Surtling_Lantern_2.Prefab.GetComponent<WearNTear>();
+            GB_Surtling_Lantern_2FabWNT.m_ashDamageImmune = false;
+            GB_Surtling_Lantern_2FabWNT.m_ashDamageResist = false;
+            GB_Surtling_Lantern_2FabWNT.m_burnable = false;
+
+            BuildPiece GB_Wood_Stairs_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Stairs_2");
+            GB_Wood_Stairs_2.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_Stairs_2.RequiredItems.Add("Wood", 8, true);
+            GB_Wood_Stairs_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_Stairs_2.Category.Set("Wood Building");
+
+            BuildPiece GB_Stone_Halfwall_Arch_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Halfwall_Arch_2");
+            GB_Stone_Halfwall_Arch_2.Tool.Add("GB_Parchment_Tool");
+            GB_Stone_Halfwall_Arch_2.RequiredItems.Add("Stone", 2, true);
+            GB_Stone_Halfwall_Arch_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Stone_Halfwall_Arch_2.Category.Set("Stone Building");
+            var GB_Stone_Halfwall_Arch_2FabWNT = GB_Stone_Halfwall_Arch_2.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Halfwall_Arch_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Halfwall_Arch_2FabWNT.m_ashDamageResist = false;
+            GB_Stone_Halfwall_Arch_2FabWNT.m_burnable = false;
+
+            BuildPiece GB_Stone_Stairs_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Stairs_2");
+            GB_Stone_Stairs_2.Tool.Add("GB_Parchment_Tool");
+            GB_Stone_Stairs_2.RequiredItems.Add("Stone", 2, true);
+            GB_Stone_Stairs_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Stone_Stairs_2.Category.Set("Stone Building");
+            var GB_Stone_Stairs_2FabWNT = GB_Stone_Stairs_2.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Stairs_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Stairs_2FabWNT.m_ashDamageResist = false;
+            GB_Stone_Stairs_2FabWNT.m_burnable = false;
 
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "sfx_openbag");
 
