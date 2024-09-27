@@ -22,7 +22,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.2.27";
+        private const string ModVersion = "1.2.29";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -958,6 +958,10 @@ namespace OdinsKingdom
             GB_Stone_Block_Stairs.RequiredItems.Add("Stone", 8, true);
             GB_Stone_Block_Stairs.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Block_Stairs.Category.Set("Stone Building");
+            var GB_Stone_Block_StairsFabWNT = GB_Stone_Block_Stairs.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Block_StairsFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Block_StairsFabWNT.m_ashDamageResist = false;
+            GB_Stone_Block_StairsFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Stairs = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Stairs");
             GB_Stone_Stairs.Tool.Add("GB_Parchment_Tool");
@@ -1143,6 +1147,20 @@ namespace OdinsKingdom
             GB_Stone_RoundWall.RequiredItems.Add("Stone", 12, true);
             GB_Stone_RoundWall.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall.Category.Set("Stone Building");
+            var GB_Stone_RoundWallFabWNT = GB_Stone_RoundWall.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWallFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWallFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWallFabWNT.m_burnable = false;
+
+            BuildPiece GB_Stone_RoundWall_Aperture = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Aperture");
+            GB_Stone_RoundWall_Aperture.Tool.Add("GB_Parchment_Tool");
+            GB_Stone_RoundWall_Aperture.RequiredItems.Add("Stone", 12, true);
+            GB_Stone_RoundWall_Aperture.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Stone_RoundWall_Aperture.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_ApertureFabWNT = GB_Stone_RoundWall_Aperture.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_ApertureFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_ApertureFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_ApertureFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Door");
             GB_Stone_RoundWall_Door.Tool.Add("GB_Parchment_Tool");
@@ -1150,18 +1168,30 @@ namespace OdinsKingdom
             GB_Stone_RoundWall_Door.RequiredItems.Add("Wood", 6, true);
             GB_Stone_RoundWall_Door.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Door.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_DoorFabWNT = GB_Stone_RoundWall_Door.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_DoorFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_DoorFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_DoorFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_DoorFrame = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_DoorFrame");
             GB_Stone_RoundWall_DoorFrame.Tool.Add("GB_Parchment_Tool");
             GB_Stone_RoundWall_DoorFrame.RequiredItems.Add("Stone", 10, true);
             GB_Stone_RoundWall_DoorFrame.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_DoorFrame.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_DoorFrameFabWNT = GB_Stone_RoundWall_DoorFrame.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_DoorFrameFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_DoorFrameFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_DoorFrameFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Third = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Third");
             GB_Stone_RoundWall_Third.Tool.Add("GB_Parchment_Tool");
             GB_Stone_RoundWall_Third.RequiredItems.Add("Stone", 6, true);
             GB_Stone_RoundWall_Third.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Third.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_ThirdFabWNT = GB_Stone_RoundWall_Third.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_ThirdFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_ThirdFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_ThirdFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Window = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Window");
             GB_Stone_RoundWall_Window.Tool.Add("GB_Parchment_Tool");
@@ -1169,6 +1199,10 @@ namespace OdinsKingdom
             GB_Stone_RoundWall_Window.RequiredItems.Add("Crystal", 2, true);
             GB_Stone_RoundWall_Window.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Window.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_WindowFabWNT = GB_Stone_RoundWall_Window.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_WindowFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_WindowFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_WindowFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_RoundWall_Window_OP = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall_Window_OP");
             GB_Stone_RoundWall_Window_OP.Tool.Add("GB_Parchment_Tool");
@@ -1176,18 +1210,30 @@ namespace OdinsKingdom
             GB_Stone_RoundWall_Window_OP.RequiredItems.Add("Crystal", 2, true);
             GB_Stone_RoundWall_Window_OP.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_RoundWall_Window_OP.Category.Set("Stone Building");
+            var GB_Stone_RoundWall_Window_OPFabWNT = GB_Stone_RoundWall_Window_OP.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RoundWall_Window_OPFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RoundWall_Window_OPFabWNT.m_ashDamageResist = false;
+            GB_Stone_RoundWall_Window_OPFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Roundwall_Battlement = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Roundwall_Battlement");
             GB_Stone_Roundwall_Battlement.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Roundwall_Battlement.RequiredItems.Add("Stone", 8, true);
             GB_Stone_Roundwall_Battlement.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Roundwall_Battlement.Category.Set("Stone Building");
+            var GB_Stone_Roundwall_BattlementFabWNT = GB_Stone_Roundwall_Battlement.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Roundwall_BattlementFabWNT.m_ashDamageImmune = false;
+            GB_Stone_Roundwall_BattlementFabWNT.m_ashDamageResist = false;
+            GB_Stone_Roundwall_BattlementFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_1x1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_1x1");
             GB_Stone_Wall_1x1.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Wall_1x1.RequiredItems.Add("Stone", 1, true);
             GB_Stone_Wall_1x1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_1x1.Category.Set("Stone Building");
+            var GB_Stone_Wall_1x1FabWNT = GB_Stone_Wall_1x1.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Wall_1x1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_1x1FabWNT.m_ashDamageResist = false;
+            GB_Stone_Wall_1x1FabWNT.m_burnable = false;
 
             BuildPiece GB_Hanging_Candles = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Candles");
             GB_Hanging_Candles.Tool.Add("GB_Parchment_Tool");
@@ -1345,6 +1391,10 @@ namespace OdinsKingdom
             GB_Stone_Railing.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Railing.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Railing.Category.Set("Stone Building");
+            var GB_Stone_RailingFabWNT = GB_Stone_Railing.Prefab.GetComponent<WearNTear>();
+            GB_Stone_RailingFabWNT.m_ashDamageImmune = false;
+            GB_Stone_RailingFabWNT.m_ashDamageResist = false;
+            GB_Stone_RailingFabWNT.m_burnable = false;
 
             BuildPiece GB_Wood_Railing = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Railing");
             GB_Wood_Railing.Tool.Add("GB_Parchment_Tool");
@@ -1385,12 +1435,20 @@ namespace OdinsKingdom
             GB_Stone_Railing_26.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Railing_26.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Railing_26.Category.Set("Stone Building");
+            var GB_Stone_Railing_26FabWNT = GB_Stone_Railing_26.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Railing_26FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Railing_26FabWNT.m_ashDamageResist = false;
+            GB_Stone_Railing_26FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Wall_Battlement_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Wall_Battlement_26");
             GB_Stone_Wall_Battlement_26.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Wall_Battlement_26.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Wall_Battlement_26.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Wall_Battlement_26.Category.Set("Stone Building");
+            var GB_Stone_Wall_Battlement_26FabWNT = GB_Stone_Wall_Battlement_26.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Wall_Battlement_26FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Wall_Battlement_26FabWNT.m_ashDamageResist = false;
+            GB_Stone_Wall_Battlement_26FabWNT.m_burnable = false;
 
             BuildPiece GB_Wooden_Railing_26 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wooden_Railing_26");
             GB_Wooden_Railing_26.Tool.Add("GB_Parchment_Tool");
@@ -1404,18 +1462,30 @@ namespace OdinsKingdom
             GB_Stone_Hatch.RequiredItems.Add("Wood", 4, true);
             GB_Stone_Hatch.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Hatch.Category.Set("Stone Building");
+            var GB_Stone_HatchFabWNT = GB_Stone_Hatch.Prefab.GetComponent<WearNTear>();
+            GB_Stone_HatchFabWNT.m_ashDamageImmune = false;
+            GB_Stone_HatchFabWNT.m_ashDamageResist = false;
+            GB_Stone_HatchFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Beam_Deco_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Beam_Deco_1");
             GB_Stone_Beam_Deco_1.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Beam_Deco_1.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Beam_Deco_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam_Deco_1.Category.Set("Deco");
+            var GB_Stone_Beam_Deco_1FabWNT = GB_Stone_Beam_Deco_1.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Beam_Deco_1FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Beam_Deco_1FabWNT.m_ashDamageResist = false;
+            GB_Stone_Beam_Deco_1FabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Beam_Deco_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Beam_Deco_2");
             GB_Stone_Beam_Deco_2.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Beam_Deco_2.RequiredItems.Add("Stone", 4, true);
             GB_Stone_Beam_Deco_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Stone_Beam_Deco_2.Category.Set("Deco");
+            var GB_Stone_Beam_Deco_2FabWNT = GB_Stone_Beam_Deco_2.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Beam_Deco_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Beam_Deco_2FabWNT.m_ashDamageResist = false;
+            GB_Stone_Beam_Deco_2FabWNT.m_burnable = false;
 
             BuildPiece GB_Wood_Beam_Deco_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Beam_Deco_1");
             GB_Wood_Beam_Deco_1.Tool.Add("GB_Parchment_Tool");
@@ -1467,6 +1537,10 @@ namespace OdinsKingdom
             GB_Pile_O_Bones.RequiredItems.Add("TrophySkeleton", 2, true);
             GB_Pile_O_Bones.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Pile_O_Bones.Category.Set("Deco");
+            var GB_Pile_O_BonesFabWNT = GB_Pile_O_Bones.Prefab.GetComponent<WearNTear>();
+            GB_Pile_O_BonesFabWNT.m_ashDamageImmune = false;
+            GB_Pile_O_BonesFabWNT.m_ashDamageResist = false;
+            GB_Pile_O_BonesFabWNT.m_burnable = false;
 
             BuildPiece GB_Stone_Pillar_Broken_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Pillar_Broken_1");
             GB_Stone_Pillar_Broken_1.Tool.Add("GB_Parchment_Tool");
@@ -1930,6 +2004,44 @@ namespace OdinsKingdom
             GB_Wood_RoundWall_Third.Crafting.Set(PieceManager.CraftingTable.Workbench);
             GB_Wood_RoundWall_Third.Category.Set("Wood Building");
 
+            BuildPiece GB_Wood_RoundWall_Aperture = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall_Aperture");
+            GB_Wood_RoundWall_Aperture.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall_Aperture.RequiredItems.Add("Wood", 10, true);
+            GB_Wood_RoundWall_Aperture.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall_Aperture.Category.Set("Wood Building");
+
+            BuildPiece GB_Wood_RoundWall_Door = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall_Door");
+            GB_Wood_RoundWall_Door.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall_Door.RequiredItems.Add("Wood", 12, true);
+            GB_Wood_RoundWall_Door.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall_Door.Category.Set("Wood Building");
+
+            BuildPiece GB_Wood_RoundWall_DoorFrame = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall_DoorFrame");
+            GB_Wood_RoundWall_DoorFrame.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall_DoorFrame.RequiredItems.Add("Wood", 6, true);
+            GB_Wood_RoundWall_DoorFrame.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall_DoorFrame.Category.Set("Wood Building");
+
+            BuildPiece GB_Wood_RoundWall_Window = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall_Window");
+            GB_Wood_RoundWall_Window.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall_Window.RequiredItems.Add("Wood", 8, true);
+            GB_Wood_RoundWall_Window.RequiredItems.Add("Crystal", 2, true);
+            GB_Wood_RoundWall_Window.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall_Window.Category.Set("Wood Building");
+
+            BuildPiece GB_Wood_RoundWall_Window_OP = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall_Window_OP");
+            GB_Wood_RoundWall_Window_OP.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall_Window_OP.RequiredItems.Add("Wood", 8, true);
+            GB_Wood_RoundWall_Window_OP.RequiredItems.Add("Crystal", 2, true);
+            GB_Wood_RoundWall_Window_OP.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall_Window_OP.Category.Set("Wood Building");
+
+            BuildPiece GB_Wood_RoundWall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_RoundWall");
+            GB_Wood_RoundWall.Tool.Add("GB_Parchment_Tool");
+            GB_Wood_RoundWall.RequiredItems.Add("Wood", 10, true);
+            GB_Wood_RoundWall.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Wood_RoundWall.Category.Set("Wood Building");
+
             BuildPiece GB_Surtling_Lantern = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Surtling_Lantern");
             GB_Surtling_Lantern.Tool.Add("GB_Parchment_Tool");
             GB_Surtling_Lantern.RequiredItems.Add("SurtlingCore", 2, true);
@@ -1975,6 +2087,72 @@ namespace OdinsKingdom
             GB_Stone_Stairs_2FabWNT.m_ashDamageImmune = false;
             GB_Stone_Stairs_2FabWNT.m_ashDamageResist = false;
             GB_Stone_Stairs_2FabWNT.m_burnable = false;
+
+            BuildPiece GB_Castle_Stone_Stairs_Left = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Stone_Stairs_Left");
+            GB_Castle_Stone_Stairs_Left.Tool.Add("GB_Parchment_Tool");
+            GB_Castle_Stone_Stairs_Left.RequiredItems.Add("Stone", 2, true);
+            GB_Castle_Stone_Stairs_Left.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Castle_Stone_Stairs_Left.Category.Set("Stone Building");
+            var GB_Castle_Stone_Stairs_LeftFabWNT = GB_Castle_Stone_Stairs_Left.Prefab.GetComponent<WearNTear>();
+            GB_Castle_Stone_Stairs_LeftFabWNT.m_ashDamageImmune = false;
+            GB_Castle_Stone_Stairs_LeftFabWNT.m_ashDamageResist = false;
+            GB_Castle_Stone_Stairs_LeftFabWNT.m_burnable = false;
+
+            BuildPiece GB_Castle_Stone_Stairs_Right = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Castle_Stone_Stairs_Right");
+            GB_Castle_Stone_Stairs_Right.Tool.Add("GB_Parchment_Tool");
+            GB_Castle_Stone_Stairs_Right.RequiredItems.Add("Stone", 2, true);
+            GB_Castle_Stone_Stairs_Right.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Castle_Stone_Stairs_Right.Category.Set("Stone Building");
+            var GB_Castle_Stone_Stairs_RightFabWNT = GB_Castle_Stone_Stairs_Right.Prefab.GetComponent<WearNTear>();
+            GB_Castle_Stone_Stairs_RightFabWNT.m_ashDamageImmune = false;
+            GB_Castle_Stone_Stairs_RightFabWNT.m_ashDamageResist = false;
+            GB_Castle_Stone_Stairs_RightFabWNT.m_burnable = false;
+
+            BuildPiece GB_Hanging_Candles_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Candles_2");
+            GB_Hanging_Candles_2.Tool.Add("GB_Parchment_Tool");
+            GB_Hanging_Candles_2.RequiredItems.Add("Tin", 4, true);
+            GB_Hanging_Candles_2.RequiredItems.Add("Resin", 4, true);
+            GB_Hanging_Candles_2.RequiredItems.Add("Honey", 4, true);
+            GB_Hanging_Candles_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Hanging_Candles_2.Category.Set("Lights and Storage");
+
+            BuildPiece GB_Hanging_Lamp_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Lamp_1");
+            GB_Hanging_Lamp_1.Tool.Add("GB_Parchment_Tool");
+            GB_Hanging_Lamp_1.RequiredItems.Add("Tin", 2, true);
+            GB_Hanging_Lamp_1.RequiredItems.Add("Honey", 2, true);
+            GB_Hanging_Lamp_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Hanging_Lamp_1.Category.Set("Lights and Storage");
+
+            BuildPiece GB_Hanging_Lamp_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Lamp_2");
+            GB_Hanging_Lamp_2.Tool.Add("GB_Parchment_Tool");
+            GB_Hanging_Lamp_2.RequiredItems.Add("Tin", 2, true);
+            GB_Hanging_Lamp_2.RequiredItems.Add("Honey", 2, true);
+            GB_Hanging_Lamp_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Hanging_Lamp_2.Category.Set("Lights and Storage");
+
+            BuildPiece GB_Stone_Fireplace_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Fireplace_2");
+            GB_Stone_Fireplace_2.Tool.Add("GB_Parchment_Tool");
+            GB_Stone_Fireplace_2.RequiredItems.Add("Stone", 8, true);
+            GB_Stone_Fireplace_2.RequiredItems.Add("Wood", 2, true);
+            GB_Stone_Fireplace_2.RequiredItems.Add("Coal", 2, true);
+            GB_Stone_Fireplace_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Stone_Fireplace_2.Category.Set("Lights and Storage");
+            var GB_Stone_Fireplace_2FabWNT = GB_Stone_Fireplace_2.Prefab.GetComponent<WearNTear>();
+            GB_Stone_Fireplace_2FabWNT.m_ashDamageImmune = false;
+            GB_Stone_Fireplace_2FabWNT.m_ashDamageResist = false;
+            GB_Stone_Fireplace_2FabWNT.m_burnable = false;
+
+            BuildPiece GB_Oven = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Oven");
+            GB_Oven.Tool.Add("GB_Parchment_Tool");
+            GB_Oven.RequiredItems.Add("Iron", 6, true);
+            GB_Oven.RequiredItems.Add("Stone", 12, true);
+            GB_Oven.RequiredItems.Add("SurtlingCore", 4, true);
+            GB_Oven.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Oven.Category.Set("Deco");
+            var GB_OvenFabWNT = GB_Oven.Prefab.GetComponent<WearNTear>();
+            GB_OvenFabWNT.m_ashDamageImmune = false;
+            GB_OvenFabWNT.m_ashDamageResist = false;
+            GB_OvenFabWNT.m_burnable = false;
 
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "sfx_openbag");
 
