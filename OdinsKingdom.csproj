@@ -63,11 +63,11 @@
       <HintPath>.\LocalizationManager.dll</HintPath>
     </Reference>
     <Reference Include="PieceManager">
-      <HintPath>C:\Users\GraveBear\Desktop\Refs\PieceManager.dll</HintPath>
+      <HintPath>.\PieceManager.dll</HintPath>
     </Reference>
     <Reference Include="ServerSync, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>C:\Users\Gravebear\Downloads\dlls\ServerSync.dll</HintPath>
+      <HintPath>.\ServerSync.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="UnityEngine, Version=0.0.0.0, Culture=neutral, processorArchitecture=MSIL">
