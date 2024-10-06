@@ -2148,7 +2148,7 @@ namespace OdinsKingdom
             GB_Oven.RequiredItems.Add("Stone", 12, true);
             GB_Oven.RequiredItems.Add("SurtlingCore", 4, true);
             GB_Oven.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Oven.Category.Set("Deco");
+            GB_Oven.Category.Set("Furniture");
             var GB_OvenFabWNT = GB_Oven.Prefab.GetComponent<WearNTear>();
             GB_OvenFabWNT.m_ashDamageImmune = false;
             GB_OvenFabWNT.m_ashDamageResist = false;
