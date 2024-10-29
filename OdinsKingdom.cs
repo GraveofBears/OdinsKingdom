@@ -22,7 +22,7 @@ namespace OdinsKingdom
     public class OdinsKingdom : BaseUnityPlugin
     {
         private const string ModName = "OdinsKingdom";
-        private const string ModVersion = "1.2.29";
+        private const string ModVersion = "1.2.34";
         private const string ModGUID = "odinplus.plugins.odinskingdom";
 
         private static readonly ConfigSync configSync = new(ModName) { DisplayName = ModName, CurrentVersion = ModVersion, MinimumRequiredVersion = ModVersion };
@@ -44,6 +44,27 @@ namespace OdinsKingdom
             GB_Parchment_Tool.CraftAmount = 1;
             ItemManager.PrefabManager.RegisterPrefab("gbcastles", "GB_Repair_Scroll");
 
+            Item GB_Gold_Cup = new("gbcastles", "GB_Gold_Cup");
+            GB_Gold_Cup.Crafting.Add("GB_Odins_Book", 1);
+            GB_Gold_Cup.RequiredItems.Add("BlackMetal", 1);
+            GB_Gold_Cup.CraftAmount = 1;
+
+            Item GB_Silver_Cup = new("gbcastles", "GB_Silver_Cup");
+            GB_Silver_Cup.Crafting.Add("GB_Odins_Book", 1);
+            GB_Silver_Cup.RequiredItems.Add("Silver", 1);
+            GB_Silver_Cup.CraftAmount = 1;
+
+            Item GB_Bronze_Cup = new("gbcastles", "GB_Bronze_Cup");
+            GB_Bronze_Cup.Crafting.Add("GB_Odins_Book", 1);
+            GB_Bronze_Cup.RequiredItems.Add("Bronze", 1);
+            GB_Bronze_Cup.CraftAmount = 1;
+
+            BuildPiece GB_Odins_Book = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Odins_Book");
+            GB_Odins_Book.Tool.Add("GB_Parchment_Tool");
+            GB_Odins_Book.RequiredItems.Add("LeatherScraps", 6, true);
+            GB_Odins_Book.RequiredItems.Add("Coal", 4, true);
+            GB_Odins_Book.Crafting.Set(PieceManager.CraftingTable.Workbench);
+            GB_Odins_Book.Category.Set("Deco");
 
             BuildPiece GB_Large_Gate = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Large_Gate");
             GB_Large_Gate.Tool.Add("GB_Parchment_Tool");
@@ -399,32 +420,32 @@ namespace OdinsKingdom
             GB_Leather_Chair.RequiredItems.Add("LeatherScraps", 5, true);
             GB_Leather_Chair.RequiredItems.Add("FineWood", 5, true);
             GB_Leather_Chair.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Leather_Chair.Category.Set("Furniture");
+            GB_Leather_Chair.Category.Set("Fixtures");
 
             BuildPiece GB_Old_Wood_Throne = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Old_Wood_Throne");
             GB_Old_Wood_Throne.Tool.Add("GB_Parchment_Tool");
             GB_Old_Wood_Throne.RequiredItems.Add("FineWood", 5, true);
             GB_Old_Wood_Throne.RequiredItems.Add("DeerHide", 5, true);
             GB_Old_Wood_Throne.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Old_Wood_Throne.Category.Set("Furniture");
+            GB_Old_Wood_Throne.Category.Set("Fixtures");
 
             BuildPiece GB_Wood_Chair_1 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Chair_1");
             GB_Wood_Chair_1.Tool.Add("GB_Parchment_Tool");
             GB_Wood_Chair_1.RequiredItems.Add("FineWood", 5, true);
             GB_Wood_Chair_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Chair_1.Category.Set("Furniture");
+            GB_Wood_Chair_1.Category.Set("Fixtures");
 
             BuildPiece GB_Wood_Chair_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Chair_2");
             GB_Wood_Chair_2.Tool.Add("GB_Parchment_Tool");
             GB_Wood_Chair_2.RequiredItems.Add("FineWood", 5, true);
             GB_Wood_Chair_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Chair_2.Category.Set("Furniture");
+            GB_Wood_Chair_2.Category.Set("Fixtures");
 
             BuildPiece GB_Wood_Stool = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Stool");
             GB_Wood_Stool.Tool.Add("GB_Parchment_Tool");
             GB_Wood_Stool.RequiredItems.Add("FineWood", 4, true);
             GB_Wood_Stool.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Stool.Category.Set("Furniture");
+            GB_Wood_Stool.Category.Set("Fixtures");
 
             BuildPiece GB_Wall_Torch = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wall_Torch");
             GB_Wall_Torch.Tool.Add("GB_Parchment_Tool");
@@ -438,25 +459,25 @@ namespace OdinsKingdom
             GB_Wood_Table.Tool.Add("GB_Parchment_Tool");
             GB_Wood_Table.RequiredItems.Add("FineWood", 5, true);
             GB_Wood_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Table.Category.Set("Furniture");
+            GB_Wood_Table.Category.Set("Fixtures");
 
             BuildPiece GB_Old_Wood_Table = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Old_Wood_Table");
             GB_Old_Wood_Table.Tool.Add("GB_Parchment_Tool");
             GB_Old_Wood_Table.RequiredItems.Add("Wood", 5, true);
             GB_Old_Wood_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Old_Wood_Table.Category.Set("Furniture");
+            GB_Old_Wood_Table.Category.Set("Fixtures");
 
             BuildPiece GB_Casket_Lid = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Casket_Lid");
             GB_Casket_Lid.Tool.Add("GB_Parchment_Tool");
             GB_Casket_Lid.RequiredItems.Add("Wood", 2, true);
             GB_Casket_Lid.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Casket_Lid.Category.Set("Furniture");
+            GB_Casket_Lid.Category.Set("Fixtures");
 
             BuildPiece GB_Casket = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Casket");
             GB_Casket.Tool.Add("GB_Parchment_Tool");
             GB_Casket.RequiredItems.Add("Wood", 10, true);
             GB_Casket.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Casket.Category.Set("Furniture");
+            GB_Casket.Category.Set("Fixtures");
 
             BuildPiece GB_Barrel_O_Skulls = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Barrel_O_Skulls");
             GB_Barrel_O_Skulls.Tool.Add("GB_Parchment_Tool");
@@ -492,27 +513,27 @@ namespace OdinsKingdom
             GB_Book_Shelf.Tool.Add("GB_Parchment_Tool");
             GB_Book_Shelf.RequiredItems.Add("Wood", 5, true);
             GB_Book_Shelf.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Book_Shelf.Category.Set("Furniture");
+            GB_Book_Shelf.Category.Set("Fixtures");
 
             BuildPiece GB_Book_Shelf_Full = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Book_Shelf_Full");
             GB_Book_Shelf_Full.Tool.Add("GB_Parchment_Tool");
             GB_Book_Shelf_Full.RequiredItems.Add("Wood", 8, true);
             GB_Book_Shelf_Full.RequiredItems.Add("LeatherScraps", 6, true);
             GB_Book_Shelf_Full.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Book_Shelf_Full.Category.Set("Furniture");
+            GB_Book_Shelf_Full.Category.Set("Fixtures");
 
             BuildPiece GB_Book_Shelf_Full_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Book_Shelf_Full_2");
             GB_Book_Shelf_Full_2.Tool.Add("GB_Parchment_Tool");
             GB_Book_Shelf_Full_2.RequiredItems.Add("Wood", 8, true);
             GB_Book_Shelf_Full_2.RequiredItems.Add("LeatherScraps", 6, true);
             GB_Book_Shelf_Full_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Book_Shelf_Full_2.Category.Set("Furniture");
+            GB_Book_Shelf_Full_2.Category.Set("Fixtures");
 
             BuildPiece GB_Hanging_Cage = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Hanging_Cage");
             GB_Hanging_Cage.Tool.Add("GB_Parchment_Tool");
             GB_Hanging_Cage.RequiredItems.Add("Iron", 2, true);
             GB_Hanging_Cage.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Hanging_Cage.Category.Set("Furniture");
+            GB_Hanging_Cage.Category.Set("Fixtures");
             var GB_Hanging_CageFabWNT = GB_Hanging_Cage.Prefab.GetComponent<WearNTear>();
             GB_Hanging_CageFabWNT.m_ashDamageImmune = false;
             GB_Hanging_CageFabWNT.m_ashDamageResist = false;
@@ -569,7 +590,7 @@ namespace OdinsKingdom
             GB_Single_Shelf.Tool.Add("GB_Parchment_Tool");
             GB_Single_Shelf.RequiredItems.Add("Wood", 2, true);
             GB_Single_Shelf.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Single_Shelf.Category.Set("Furniture");
+            GB_Single_Shelf.Category.Set("Fixtures");
 
             BuildPiece GB_Sitting_Skeleton = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Sitting_Skeleton");
             GB_Sitting_Skeleton.Tool.Add("GB_Parchment_Tool");
@@ -669,7 +690,7 @@ namespace OdinsKingdom
             GB_Stone_Table.Tool.Add("GB_Parchment_Tool");
             GB_Stone_Table.RequiredItems.Add("Stone", 10, true);
             GB_Stone_Table.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Stone_Table.Category.Set("Furniture");
+            GB_Stone_Table.Category.Set("Fixtures");
             var GB_Stone_TableFabWNT = GB_Stone_Table.Prefab.GetComponent<WearNTear>();
             GB_Stone_TableFabWNT.m_ashDamageImmune = false;
             GB_Stone_TableFabWNT.m_ashDamageResist = false;
@@ -916,42 +937,42 @@ namespace OdinsKingdom
             GB_Wall_Shelf.Tool.Add("GB_Parchment_Tool");
             GB_Wall_Shelf.RequiredItems.Add("Wood", 6, true);
             GB_Wall_Shelf.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wall_Shelf.Category.Set("Furniture");
+            GB_Wall_Shelf.Category.Set("Fixtures");
 
             BuildPiece GB_Rectangle_Rug = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rectangle_Rug");
             GB_Rectangle_Rug.Tool.Add("GB_Parchment_Tool");
             GB_Rectangle_Rug.RequiredItems.Add("DeerHide", 6, true);
             GB_Rectangle_Rug.RequiredItems.Add("Coal", 2, true);
             GB_Rectangle_Rug.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Rectangle_Rug.Category.Set("Furniture");
+            GB_Rectangle_Rug.Category.Set("Fixtures");
 
             BuildPiece GB_Round_Rug = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Round_Rug");
             GB_Round_Rug.Tool.Add("GB_Parchment_Tool");
             GB_Round_Rug.RequiredItems.Add("DeerHide", 2, true);
             GB_Round_Rug.RequiredItems.Add("Coal", 2, true);
             GB_Round_Rug.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Round_Rug.Category.Set("Furniture");
+            GB_Round_Rug.Category.Set("Fixtures");
 
             BuildPiece GB_Oval_Rug = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Oval_Rug");
             GB_Oval_Rug.Tool.Add("GB_Parchment_Tool");
             GB_Oval_Rug.RequiredItems.Add("DeerHide", 4, true);
             GB_Oval_Rug.RequiredItems.Add("Coal", 2, true);
             GB_Oval_Rug.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Oval_Rug.Category.Set("Furniture");
+            GB_Oval_Rug.Category.Set("Fixtures");
 
             BuildPiece GB_Rug_Section = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rug_Section");
             GB_Rug_Section.Tool.Add("GB_Parchment_Tool");
             GB_Rug_Section.RequiredItems.Add("DeerHide", 4, true);
             GB_Rug_Section.RequiredItems.Add("Coal", 2, true);
             GB_Rug_Section.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Rug_Section.Category.Set("Furniture");
+            GB_Rug_Section.Category.Set("Fixtures");
 
             BuildPiece GB_Rug_End = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Rug_End");
             GB_Rug_End.Tool.Add("GB_Parchment_Tool");
             GB_Rug_End.RequiredItems.Add("DeerHide", 1, true);
             GB_Rug_End.RequiredItems.Add("Coal", 1, true);
             GB_Rug_End.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Rug_End.Category.Set("Furniture");
+            GB_Rug_End.Category.Set("Fixtures");
 
             BuildPiece GB_Stone_Block_Stairs = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Block_Stairs");
             GB_Stone_Block_Stairs.Tool.Add("GB_Parchment_Tool");
@@ -1126,21 +1147,21 @@ namespace OdinsKingdom
             GB_Red_Jute_Bed.RequiredItems.Add("FineWood", 10, true);
             GB_Red_Jute_Bed.RequiredItems.Add("JuteRed", 2, true);
             GB_Red_Jute_Bed.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Red_Jute_Bed.Category.Set(BuildPieceCategory.Furniture);
+            GB_Red_Jute_Bed.Category.Set("Fixtures");
 
             BuildPiece GB_Blue_Jute_Bed = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Blue_Jute_Bed");
             GB_Blue_Jute_Bed.Tool.Add("GB_Parchment_Tool");
             GB_Blue_Jute_Bed.RequiredItems.Add("FineWood", 10, true);
             GB_Blue_Jute_Bed.RequiredItems.Add("JuteBlue", 2, true);
             GB_Blue_Jute_Bed.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Blue_Jute_Bed.Category.Set(BuildPieceCategory.Furniture);
+            GB_Blue_Jute_Bed.Category.Set("Fixtures");
 
             BuildPiece GB_Black_Cloth_Bed = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Black_Cloth_Bed");
             GB_Black_Cloth_Bed.Tool.Add("GB_Parchment_Tool");
             GB_Black_Cloth_Bed.RequiredItems.Add("FineWood", 10, true);
             GB_Black_Cloth_Bed.RequiredItems.Add("Tar", 2, true);
             GB_Black_Cloth_Bed.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Black_Cloth_Bed.Category.Set(BuildPieceCategory.Furniture);
+            GB_Black_Cloth_Bed.Category.Set("Fixtures");
 
             BuildPiece GB_Stone_RoundWall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_RoundWall");
             GB_Stone_RoundWall.Tool.Add("GB_Parchment_Tool");
@@ -1503,7 +1524,7 @@ namespace OdinsKingdom
             GB_Broken_Barrel.Tool.Add("GB_Parchment_Tool");
             GB_Broken_Barrel.RequiredItems.Add("Wood", 4, true);
             GB_Broken_Barrel.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Broken_Barrel.Category.Set("Furniture");
+            GB_Broken_Barrel.Category.Set("Fixtures");
 
             BuildPiece GB_Broken_Wood_Pile = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Broken_Wood_Pile");
             GB_Broken_Wood_Pile.Tool.Add("GB_Parchment_Tool");
@@ -1606,25 +1627,25 @@ namespace OdinsKingdom
             GB_Tapestry_1.Tool.Add("GB_Parchment_Tool");
             GB_Tapestry_1.RequiredItems.Add("LinenThread", 10, true);
             GB_Tapestry_1.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Tapestry_1.Category.Set("Furniture");
+            GB_Tapestry_1.Category.Set("Fixtures");
 
             BuildPiece GB_Tapestry_2 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Tapestry_2");
             GB_Tapestry_2.Tool.Add("GB_Parchment_Tool");
             GB_Tapestry_2.RequiredItems.Add("LinenThread", 10, true);
             GB_Tapestry_2.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Tapestry_2.Category.Set("Furniture");
+            GB_Tapestry_2.Category.Set("Fixtures");
 
             BuildPiece GB_Tapestry_3 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Tapestry_3");
             GB_Tapestry_3.Tool.Add("GB_Parchment_Tool");
             GB_Tapestry_3.RequiredItems.Add("LinenThread", 10, true);
             GB_Tapestry_3.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Tapestry_3.Category.Set("Furniture");
+            GB_Tapestry_3.Category.Set("Fixtures");
 
             BuildPiece GB_Tapestry_4 = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Tapestry_4");
             GB_Tapestry_4.Tool.Add("GB_Parchment_Tool");
             GB_Tapestry_4.RequiredItems.Add("LinenThread", 10, true);
             GB_Tapestry_4.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Tapestry_4.Category.Set("Furniture");
+            GB_Tapestry_4.Category.Set("Fixtures");
 
             BuildPiece GB_Stone_Chimney = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Stone_Chimney");
             GB_Stone_Chimney.Tool.Add("GB_Parchment_Tool");
@@ -1899,7 +1920,7 @@ namespace OdinsKingdom
             GB_Wood_Bench.Tool.Add("GB_Parchment_Tool");
             GB_Wood_Bench.RequiredItems.Add("Wood", 4, true);
             GB_Wood_Bench.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Wood_Bench.Category.Set("Furniture");
+            GB_Wood_Bench.Category.Set("Fixtures");
 
             BuildPiece GB_Canopy_Bed = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Canopy_Bed");
             GB_Canopy_Bed.Tool.Add("GB_Parchment_Tool");
@@ -1907,7 +1928,7 @@ namespace OdinsKingdom
             GB_Canopy_Bed.RequiredItems.Add("Tar", 2, true);
             GB_Canopy_Bed.RequiredItems.Add("JuteRed", 2, true);
             GB_Canopy_Bed.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Canopy_Bed.Category.Set("Furniture");
+            GB_Canopy_Bed.Category.Set("Fixtures");
 
             BuildPiece GB_Table_Cloth = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Table_Cloth");
             GB_Table_Cloth.Tool.Add("GB_Parchment_Tool");
@@ -1915,7 +1936,7 @@ namespace OdinsKingdom
             GB_Table_Cloth.RequiredItems.Add("LeatherScraps", 6, true);
             GB_Table_Cloth.RequiredItems.Add("Tar", 2, true);
             GB_Table_Cloth.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Table_Cloth.Category.Set("Furniture");
+            GB_Table_Cloth.Category.Set("Fixtures");
 
             BuildPiece GB_Wood_Halfwall = new(PiecePrefabManager.RegisterAssetBundle("gbcastles"), "GB_Wood_Halfwall");
             GB_Wood_Halfwall.Tool.Add("GB_Parchment_Tool");
@@ -2147,8 +2168,8 @@ namespace OdinsKingdom
             GB_Oven.RequiredItems.Add("Iron", 6, true);
             GB_Oven.RequiredItems.Add("Stone", 12, true);
             GB_Oven.RequiredItems.Add("SurtlingCore", 4, true);
-            GB_Oven.Crafting.Set(PieceManager.CraftingTable.Workbench);
-            GB_Oven.Category.Set("Furniture");
+            GB_Oven.Crafting.Set(PieceManager.CraftingTable.ArtisanTable);
+            GB_Oven.Category.Set("Fixtures");
             var GB_OvenFabWNT = GB_Oven.Prefab.GetComponent<WearNTear>();
             GB_OvenFabWNT.m_ashDamageImmune = false;
             GB_OvenFabWNT.m_ashDamageResist = false;
